@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cogito233.github.io/HKU/MATH2014%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/</loc>
+    
+    <lastmod>2021-04-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://cogito233.github.io/HKU/ENGG1340%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2021-04-04</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>http://cogito233.github.io/Math/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/</loc>
-    
-    <lastmod>2021-04-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://cogito233.github.io/HKU/MATH2014%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/</loc>
     
     <lastmod>2021-04-04</lastmod>
     
@@ -95,13 +95,6 @@
 
   
   <url>
-    <loc>http://cogito233.github.io/tags/physical/</loc>
-    <lastmod>2021-04-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://cogito233.github.io/tags/Math/</loc>
     <lastmod>2021-04-05</lastmod>
     <changefreq>daily</changefreq>
@@ -109,7 +102,7 @@
   </url>
   
   <url>
-    <loc>http://cogito233.github.io/tags/sayHi/</loc>
+    <loc>http://cogito233.github.io/tags/physical/</loc>
     <lastmod>2021-04-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -117,6 +110,13 @@
   
   <url>
     <loc>http://cogito233.github.io/tags/COMP/</loc>
+    <lastmod>2021-04-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://cogito233.github.io/tags/sayHi/</loc>
     <lastmod>2021-04-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -160,14 +160,14 @@
 
   
   <url>
-    <loc>http://cogito233.github.io/categories/HKU/</loc>
+    <loc>http://cogito233.github.io/categories/Math/</loc>
     <lastmod>2021-04-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://cogito233.github.io/categories/Math/</loc>
+    <loc>http://cogito233.github.io/categories/HKU/</loc>
     <lastmod>2021-04-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
