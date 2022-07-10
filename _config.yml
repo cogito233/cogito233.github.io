@@ -82,11 +82,11 @@ analytics:
 author:
   name             : "Zhiheng Lyu"
   avatar           : "profile.jpg"
-  bio              : "Year-2 CS student at The University of Hong Kong"
+  bio              : "RA@ETHz;Year-2 CS student@HKU"
   location         : "Hong Kong"
   employer         :
   pubmed           :  # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    :  # "http://yourfullgooglescholarurl.com"
+  googlescholar    : "https://scholar.google.com/citations?user=74drf_cAAAAJ&hl=en"
   email            : "zhlyu@cs.hku.hk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -110,7 +110,7 @@ author:
   steam            :
   tumblr           :
   twitter          : # "replacethistwitterhandle"
-  vine             :
+  vine             : "https://twitter.com/ZhihengLyu"
   weibo            :
   xing             :
   youtube          :
