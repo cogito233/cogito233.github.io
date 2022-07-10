@@ -9,8 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-See details of my [resume](https://www.linkedin.com/in/zhiheng-lyu-b022861ba/)
-
 Education
 ======
 
@@ -29,13 +27,16 @@ Work experience
 * Summer 2021: Research Engineer Intern in AutoML Infrastructure
   * MEGVII(Face++), R-face Institute
   * Details of work:
+    
     * Developer in Snapclf (An algorithmic automatic search system);
   * Reading some papers in detection and basic deep learning;
-    * Reproduced some unsupervised learning papers to Industrial occasions.
-  * Advisor: [Erjin Zhou](https://scholar.google.com/citations?user=k2ziPUsAAAAJ&hl=zh-CN), [Yiping Bao](https://scholar.google.com/citations?user=EB9_W4kAAAAJ&hl=zh-CN)
-Service and leadership
-======
+    
+  * Reproduced some unsupervised learning papers to Industrial occasions.
+* Advisor: [Erjin Zhou](https://scholar.google.com/citations?user=k2ziPUsAAAAJ&hl=zh-CN), [Yiping Bao](https://scholar.google.com/citations?user=EB9_W4kAAAAJ&hl=zh-CN)
 
+    Service and leadership
+    ======
+  
 * 2021~2022: Team Leader of [HKU-RoboMaster-AI Association](https://innoacademy.engg.hku.hk/robomaster-ai5/)
   * Focus on RoboMaster University AI Challenge (RUMA) organized by IEEE International Conference on Robotics and Automation (ICRA);
   * Conducting the training of the team and organizing several paper reading and sharing activities;
@@ -66,14 +67,5 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
 
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+See the details of my [resume](https://www.linkedin.com/in/zhiheng-lyu-b022861ba/)
