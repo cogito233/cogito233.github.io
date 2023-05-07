@@ -82,8 +82,8 @@ analytics:
 author:
   name             : "Zhiheng Lyu"
   avatar           : "profile.jpg"
-  bio              : "RA@ETHz;Year-2 CS student@HKU"
-  location         : "Hong Kong"
+  bio              : "RA@BAIR;Year-3 CS student@HKU"
+  location         : "Berkeley, CA"
   employer         :
   pubmed           :  # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=74drf_cAAAAJ&hl=en"
@@ -176,16 +176,13 @@ kramdown:
 # Collections
 collections:
   teaching:
-    output: false
+    output: true
     permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: false
-    permalink: /:collection/:path/
-  talks:
-    output: false
+  statements:
+    output: true
     permalink: /:collection/:path/
 
 

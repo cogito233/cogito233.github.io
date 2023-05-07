@@ -10,18 +10,18 @@ redirect_from:
 
 Hi, here is Zhiheng. Welcome to my personal website, nice to see you~
 
-Currently I’m a visiting student at UC Berkeley, and I'm 3th year CS major undergraduate student in the University of Hong Kong, supervised by Lingpeng Kong. In this summer I'll work at Berkeley Artificial Intelligence Research (BAIR) Lab supervised by Kevin Yang, forcusing on controlable text generation. Previously I'm working at ETH NLPED Lab supervised by Zhijing Jin, and I also spend some time work as a research intern in Megvii R-face institution. I'm currently forcusing on Controlable Text Generation;      Interpretable Learning and Causal Inference while I am deeply passionate about develop AI solutions for human benefit, for more details about that, please see Statements.
+Currently I’m a visiting student at UC Berkeley, and I'm 3th year CS major undergraduate student in the University of Hong Kong, supervised by Lingpeng Kong. This summer, I'll be working at the Berkeley Artificial Intelligence Research (BAIR) Lab, supervised by Kevin Yang, focusing on controllable text generation. Previously, I've worked at the ETH NLPED Lab under the supervision of Zhijing Jin and as a research intern at Megvii R-face institution. My research interests include Controllable Text Generation, Interpretable Learning, and Causal Inference. I'm deeply passionate about developing AI solutions for human benefit – for more details, please see my Statements.
 
-Despite my research in computer science, statistics and machine learning, I'm also enthusiastic in diverse areas ranging from philosophy, psychology, sociology and economics. I believe that knowledge in different fields has transferable paradigms, and a macro perspective is useful for solving local problems, and help to understand "what is the real problem".
+In addition to my research in computer science, statistics, and machine learning, I'm enthusiastic about exploring diverse areas such as philosophy, psychology, sociology, and economics. I believe that knowledge from different fields offers transferable paradigms and that a macro perspective is useful for solving local problems and understanding the "real problem" at hand.
 
-For potential collaborators with similar interest, you can email me at `zhihenglyu.cs@gmail.com` if you are interested in my current project, or seeking potential cooperation in the any of the following term:
+If you're a potential collaborator with similar interests, feel free to email me at `zhihenglyu.cs@gmail.com`. I'm open to discussing my current projects or exploring potential cooperation in any of the following areas:
 
 * Research Project
 * Developing Open source project
 * Cofounder of Community/Association
-* Start-up Company
+* Start-up Companies
 
-For freshman and sophomore who are ambitious to CS research, please do not hesitate to contact me. I'm glad to meet more new people with diversity background, share my experimence and/or start a potential mentorship.
+For freshmen and sophomores interested in pursuing CS research, please don't hesitate to reach out. I'm excited to meet new people from diverse backgrounds, share my experiences, and potentially start a mentorship.
 
 For my previous experimence, please see my [Resume](https://cogito233.github.io/cv/).
 
