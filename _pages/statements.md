@@ -1,9 +1,9 @@
 ---
 layout: archive
-title: "statements"
+title: "Statements"
 permalink: /statements/
 author_profile: true
 
 ---
 
-Here are some statements...
+Please refer to my [SoP](https://cogito233.github.io/files/SoP_v3.pdf).
