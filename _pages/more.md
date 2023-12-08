@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "More"
+title: "Beyond Research"
 permalink: /more/
 author_profile: true
 
@@ -11,12 +11,6 @@ author_profile: true
 Algorithm competition is my ex-girlfriend. I enjoy the process of formalizing problems and solving them using abstract symbolic languages, which also motivate me to solve more complex problem by language system. During my time leading the University of [Hong Kong's ICPC team](https://i.cs.hku.hk/~provinci/achievements.html), we entered the ICPC World Finals for the first time in 9 years and achieved 9th place in the ICPC World Challenge. We won two gold medals in regional competitions in Shanghai and Nanjing. In high school, I won a silver medal in NOI 2017 and a gold medal in APIO 2017. I was admitted early to Shaoxing No. 1 High School due to my talent in algorithm competitions.
 
 I'm enthusiastic about exploring diverse areas such as *philosophy*, *psychology*, *sociology*, and *economics*. I believe that knowledge from different fields offers transferable paradigms and that a macro perspective is useful for solving local problems and understanding the "real problem" at hand.
-
-## More
-
-If you're a potential collaborator with similar interests, feel free to email me at `zhihenglyu.cs@gmail.com`. I'm open to discussing my current projects or exploring potential cooperation in any of the following areas: `Research Project`, `Developing Open source project`, `Cofounder of Community/Association`, `Start-up Companies`.
-
-For freshmen and sophomores interested in pursuing CS research, please don't hesitate to reach out. I'm excited to meet new people from diverse backgrounds, share my experiences, and potentially start a mentorship.
 
 ## Some Random Info
 

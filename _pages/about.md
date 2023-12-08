@@ -26,3 +26,9 @@ Currently I'm a senior undergraduate student major in Computer Science in Univer
 {% for post in site.publications reversed %}
   {% include archive-single.html %}
 {% endfor %}
+
+## More
+
+If you're a potential collaborator with similar interests, feel free to email me at `zhihenglyu.cs@gmail.com`. I'm open to discussing my current projects or exploring potential cooperation in any of the following areas: `Research Project`, `Developing Open source project`, `Cofounder of Community/Association`, `Start-up Companies`.
+
+For freshmen and sophomores interested in pursuing CS research, please don't hesitate to reach out. I'm excited to meet new people from diverse backgrounds, share my experiences, and potentially start a mentorship.

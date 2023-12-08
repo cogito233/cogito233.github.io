@@ -1,5 +1,5 @@
 ---
-title: "Logical Fallacy Detection"
+title: "Can Large Language Models Infer Causation from Correlation?"
 collection: publications
 permalink: /publication/Logical-Fallacy-Detection
 excerpt: ' This research introduces the first benchmark dataset, Corr2Cause, to test large language models' (LLMs) pure causal inference skills.'
