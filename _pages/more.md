@@ -1,6 +1,5 @@
 ---
 layout: archive
-title: "Beyond Research"
 permalink: /more/
 author_profile: true
 

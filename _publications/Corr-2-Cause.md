@@ -1,9 +1,9 @@
 ---
 title: "Can Large Language Models Infer Causation from Correlation?"
 collection: publications
-permalink: /publication/Logical-Fallacy-Detection
+permalink: /publication/Corr-2-Cause
 excerpt: ' This research introduces the first benchmark dataset, Corr2Cause, to test large language models' (LLMs) pure causal inference skills.'
-date: 2022-02-01
+date: 2023-06-01
 venue: ''
 paperurl: 'https://arxiv.org/abs/2306.05836'
 citation: 'Jin Z, Liu J, Lyu Z, et al. Can Large Language Models Infer Causation from Correlation?[J]. arXiv preprint arXiv:2306.05836, 2023.'
