@@ -12,3 +12,15 @@ Causal inference is one of the hallmarks of human intelligence. While the field 
 
 [Download paper here](https://arxiv.org/abs/2306.05836)
 
+Recommended citation:
+
+```tex
+@article{jin2023can,
+  title={Can Large Language Models Infer Causation from Correlation?},
+  author={Jin, Zhijing and Liu, Jiarui and Lyu, Zhiheng and Poff, Spencer and Sachan, Mrinmaya and Mihalcea, Rada and Diab, Mona and Sch{\"o}lkopf, Bernhard},
+  journal={arXiv preprint arXiv:2306.05836},
+  year={2023}
+}
+
+```
+
