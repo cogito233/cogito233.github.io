@@ -3,10 +3,10 @@ title: "Can Large Language Models Infer Causation from Correlation?"
 collection: publications
 permalink: /publication/Corr-to-Cause
 excerpt: "This research introduces the first benchmark dataset, Corr2Cause, to test large language models (LLMs) pure causal inference skills."
-date: 2023-06-01
+date: 2022-02-01
 venue: ''
-paperurl: 'https://arxiv.org/abs/2306.05836'
-citation: 'Jin Z, Liu J, Lyu Z, et al. Can Large Language Models Infer Causation from Correlation?[J]. arXiv preprint arXiv:2306.05836, 2023.'
+paperurl: 'https://arxiv.org/abs/2202.13758'
+citation: 'Jin, Lalwani, A., Vaidhya, T., Shen, X., Ding, Y., Lyu, Z., Sachan, M., Mihalcea, R., & Schölkopf, B. (2022). Logical Fallacy Detection.'
 ---
 Reasoning is central to human intelligence. However, fallacious arguments are common, and some exacerbate problems such as spreading misinformation about climate change. In this paper, we propose the task of logical fallacy detection, and provide a new dataset (LOGIC) of logical fallacies generally found in text, together with an additional challenge set for detecting logical fallacies in climate change claims (LOGICCLIMATE). Detecting logical fallacies is a hard problem as the model must understand the underlying logical structure of the argument. We find that existing pretrained large language models perform poorly on this task. In contrast, we show that a simple structure-aware classifier outperforms the best language model by 5.46% on LOGIC and 4.51% on LOGICCLIMATE. We encourage future work to explore this task as (a) it can serve as a new reasoning challenge for language models, and (b) it can have potential applications in tackling the spread of misinformation.
 
