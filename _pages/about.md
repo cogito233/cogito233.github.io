@@ -25,7 +25,7 @@ I'm also working on **BrowserAgent**, which focuses on information-seeking tasks
 I believe that as models get stronger, the definition of tasks becomes increasingly important. My benchmark work spans three approaches:
 
 - **Synthesis**: Converting existing data (PixelWorld converts textual reasoning to images, Corr2Cause generates causal reasoning problems)
-- **Human-in-the-loop**: Leading SWE-QA-Pro with crowdsourced annotation and validation
+- **Human-in-the-loop**: Developing repo-level QA benchmarks with crowdsourced annotation and validation
 - **Structural data**: Building benchmarks from web pages and GitHub repositories
 
 I've contributed to **StructEval** for structured output evaluation and **VideoScore** for video generation assessment.
@@ -51,4 +51,6 @@ For detailed future research directions, see my [Research Statements](/statement
 
 ## Contact
 
-Feel free to reach out at `z63lyu@uwaterloo.ca` for research collaboration, open source projects, or mentorship opportunities.
+I'm currently seeking opportunities in industry related to AI for Software Engineering. If you have relevant positions or can provide recommendations, I would greatly appreciate it.
+
+Feel free to reach out at `z63lyu@uwaterloo.ca` for research collaboration, open source projects, job opportunities, or mentorship.

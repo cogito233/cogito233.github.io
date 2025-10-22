@@ -30,6 +30,12 @@ I'm enthusiastic about exploring diverse areas such as *philosophy*, *psychology
 
 This interdisciplinary approach directly influences my research. For instance, my work on **Psychologically-Inspired Causal Prompts** draws from psychology to understand how different cognitive processes affect language model performance. I believe that understanding human cognition and social dynamics is crucial for developing AI systems that are both effective and aligned with human values.
 
+## Business & Investment Experience
+
+I spent a summer interning at [Capital Today Group](http://www.capitaltoday.com/eng/index.html), where I gained invaluable insights into the business side of technology. I'm deeply grateful to Kathy for teaching me about the comprehensive effects of intangible assets, the value of platforms and brands, and how people tend to overestimate technology in the short term while underestimating it in the long term.
+
+I strongly encourage every technical person to learn some business knowledge. If you're interested in internship opportunities at CTG, please feel free to contact me.
+
 
 ## Some Random Info
 
