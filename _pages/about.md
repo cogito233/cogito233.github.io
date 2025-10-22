@@ -8,16 +8,28 @@ redirect_from:
   - /about.html
 ---
 
-Hi, here is Zhiheng. Welcome to my personal website, nice to see you😆~ I'm currently seeking a PhD position on the term of 24Fall. My research interests are specifically focused on `structural text planning and generation`, `causality in natural language processing`, and `the development of efficient large language models (LLMs)`. I am deeply passionate about advancing the field of AI by creating innovative systems that *merge language structures with logical reasoning to address complex real-world problems efficiently*. – for more details, please see my [SoP](https://cogito233.github.io/files/SoP_v3.pdf) and [CV](https://cogito233.github.io/files/CV.pdf).
+Hi, I'm Zhiheng. Welcome to my personal website! I'm currently a second-year Master's student at the [University of Waterloo](https://uwaterloo.ca/), supervised by Professor [Wenhu Chen](https://wenhuchen.github.io/) at the [TIGER Lab](https://tiger-ai-lab.github.io/). My research mainly spans three areas: **Agentic Post-Training**, **Benchmarks**, and **Knowledge Argument Methods**.
 
-Currently I'm a senior undergraduate student major in Computer Science in University of Hong Kong, supervised by Lingpeng Kong. Last summer, I work at the [Berkeley NLP](https://nlp.cs.berkeley.edu/), supervised by [Kevin Yang](https://people.eecs.berkeley.edu/~yangk/) and Prof [Dan Klein](https://people.eecs.berkeley.edu/~klein/), focusing on fact tracking and contradict detection in a narrative structure, such as story outline. Previously, I've worked at the [ETH NLPED Lab](https://www.mrinmaya.io/) under the supervision of [Zhijing Jin](https://zhijing-jin.com/fantasy/) and [Dr. Mrinmaya Sachan](https://inf.ethz.ch/people/person-detail.MjYyNzc4.TGlzdC8zMDQsLTg3NDc3NjI0MQ==.html), and as a research intern at [Megvii](https://en.megvii.com/). 
+I did my undergrad in Computer Science at the [University of Hong Kong](https://www.hku.hk/), where I was active in algorithm competitions—I entered the [ICPC World Finals](https://icpc.global/) and won two regional gold medals. I've had the privilege to work with amazing research groups including [Berkeley NLP](https://nlp.cs.berkeley.edu/), [ETH NLPED Lab](https://www.mrinmaya.io/), and [University of Michigan LIT Lab](https://lit.eecs.umich.edu/).
+
+Currently, I'm focused on **AI for Software Engineering**, particularly post-training for large models using RL-based methods. I'm a core contributor to the open-source framework [VerlTool](https://github.com/TIGER-AI-Lab/verl-tool/tree/main) and have been deeply involved in the development of MiniMax-M1 and M2-preview on software engineering tasks. I've also worked as a Research Scientist Intern at [MiniMax](https://www.minimaxi.com/) on their Base Model Team. 
 
 ## Research Highlight
 
-- Fact tracking and contradict detection in story outline
-- Probing the Understanding of Large Language Model in Causality
-- Explore new Training Paradigm for a Causal Graph based on Conditional Independent Test
-- Construct and Pre-process Datasets on NLP for Social Good
+### Agentic Post-Training
+- Deep involvement in the full pipeline of [MiniMax-M1](https://arxiv.org/abs/placeholder) and M2-preview on software engineering tasks
+- Core contributor to [VerlTool](https://github.com/TIGER-AI-Lab/verl-tool/tree/main), developing environment interaction modules and post-training setup for SWE tasks
+- Research on [BrowserAgent](https://arxiv.org/abs/placeholder) for information-seeking tasks with direct browser environment interaction
+
+### Benchmarks & Evaluation
+- Leading SWE-QA-Pro: a repo-level QA benchmark with human-in-the-loop annotation
+- Contributed to [StructEval](https://tiger-ai-lab.github.io/StructEval/) and [VideoScore](https://tiger-ai-lab.github.io/VideoScore/) benchmark projects
+- Created [PixelWorld](https://arxiv.org/abs/placeholder) for probing VLM reasoning and [Corr2Cause](https://huggingface.co/datasets/causalnlp/corr2cause) dataset for causal inference evaluation
+
+### Causal Reasoning & Knowledge Methods
+- [FactTrack](https://arxiv.org/abs/placeholder) project at [Berkeley NLP](https://nlp.cs.berkeley.edu/): fact tracking and contradiction detection in narrative structures
+- Probing large language models' understanding of causality with [Psychologically-Inspired Causal Prompts](https://arxiv.org/pdf/2305.01764.pdf)
+- Lightweight methods to enhance LLM capabilities without retraining
 
 ## Publications
 
@@ -27,8 +39,17 @@ Currently I'm a senior undergraduate student major in Computer Science in Univer
   {% include archive-single.html %}
 {% endfor %}
 
-## More
+## Future Research Directions
 
-If you're a potential collaborator with similar interests, feel free to email me at `zhihenglyu.cs@gmail.com`. I'm open to discussing my current projects or exploring potential cooperation in any of the following areas: `Research Project`, `Developing Open source project`, `Cofounder of Community/Association`, `Start-up Companies`.
+I'm particularly interested in **AI for Software Engineering** for three key reasons:
+1. **Structural data**: SWE data is easier to collect and synthesize
+2. **Real-world relevance**: Closer to practical applications with ill-defined task paradigms
+3. **Economic value**: Training on code tasks can generalize to improve reasoning across domains
 
-For freshmen and sophomores interested in pursuing CS research, please don't hesitate to reach out. I'm excited to meet new people from diverse backgrounds, share my experiences, and potentially start a mentorship.
+I'm exploring how to decompose SWE tasks into skill-specific components using expert knowledge, focusing on areas like debugging, performance optimization, refactoring, test generation, repository-level QA, and security.
+
+## Contact
+
+If you're a potential collaborator with similar interests, feel free to reach out at `z63lyu@uwaterloo.ca`. I'm open to discussing research projects, open source development, community building, or startup opportunities.
+
+For students interested in CS research, I'm excited to share experiences and potentially start mentorships.

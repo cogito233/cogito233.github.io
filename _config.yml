@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Zhiheng Lyu"
 title_separator          : "-"
 name                     : &name "Zhiheng Lyu"
-description              : &description "Senior CS student at The University of Hong Kong"
+description              : &description "Master's student at University of Waterloo, focusing on AI for Software Engineering"
 url                      : https://cogito233.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "cogito233/cogito233.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Zhiheng Lyu"
   avatar           : "profile.jpg"
-  bio              : "RA@Berkeley NLP; Senior CS student@HKU"
-  location         : "Hong Kong S.A.R."
+  bio              : "M.Math student@UWaterloo; Core contributor to VerlTool"
+  location         : "Waterloo, ON, Canada"
   employer         :
   pubmed           :  # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=74drf_cAAAAJ&hl=en"
-  email            : "zhlyu@cs.hku.hk"
+  email            : "z63lyu@uwaterloo.ca"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
