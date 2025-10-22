@@ -1,14 +1,35 @@
 ---
 layout: archive
-title: "Beyond Research"
+title: "More"
 permalink: /more/
 author_profile: true
 
 ---
 
-Algorithm competition is my ex-girlfriend. I enjoy the process of formalizing problems and solving them using abstract symbolic languages, which also motivate me to solve more complex problem by language system. During my time leading the University of [Hong Kong's ICPC team](https://i.cs.hku.hk/~provinci/achievements.html), we entered the ICPC World Finals for the first time in 9 years and achieved 9th place in the ICPC World Challenge. We won two gold medals in regional competitions in Shanghai and Nanjing. In high school, I won a silver medal in NOI 2017 and a gold medal in APIO 2017. I was admitted early to Shaoxing No. 1 High School due to my talent in algorithm competitions.
+## Algorithm Competitions
+
+Algorithm competition is my ex-girlfriend. I enjoy the process of formalizing problems and solving them using abstract symbolic languages, which also motivates me to solve more complex problems by language systems.
+
+### University Achievements
+During my time leading the University of [Hong Kong's ICPC team](https://i.cs.hku.hk/~provinci/achievements.html), we achieved several milestones:
+- **ICPC World Finals 2022**: Entered for the first time in 9 years, ranked 50th globally
+- **ICPC World Challenge 2022**: Achieved 9th place
+- **Regional Gold Medals**: Won gold in both Shanghai (ranked 20/668) and Nanjing (ranked 7/556) regions
+- **Team Leadership**: Served as team captain and trainer for the algorithm competition group
+
+### High School Background
+- **NOI 2018**: Silver Medal at National Olympiad in Informatics
+- **APIO 2018**: Gold Medal at Asia-Pacific Informatics Olympiad
+- **Early Admission**: Admitted to Shaoxing No.1 High School based on algorithmic talent
+
+The competitive programming experience taught me to think systematically about problem decomposition, optimization, and efficient implementation—skills that directly transfer to my current research in AI systems.
+
+## Interdisciplinary Interests
 
 I'm enthusiastic about exploring diverse areas such as *philosophy*, *psychology*, *sociology*, and *economics*. I believe that knowledge from different fields offers transferable paradigms and that a macro perspective is useful for solving local problems and understanding the "real problem" at hand.
+
+This interdisciplinary approach directly influences my research. For instance, my work on **Psychologically-Inspired Causal Prompts** draws from psychology to understand how different cognitive processes affect language model performance. I believe that understanding human cognition and social dynamics is crucial for developing AI systems that are both effective and aligned with human values.
+
 
 ## Some Random Info
 
