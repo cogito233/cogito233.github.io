@@ -12,12 +12,12 @@ Hi, I'm Zhiheng. Welcome to my personal website! I'm currently a second-year Mas
 
 I did my undergrad in Computer Science at the University of Hong Kong, where I was active in algorithm competitions—I entered the ICPC World Finals and won two regional gold medals. I've had the privilege to work with research groups at Berkeley, ETH Zürich, and University of Michigan.
 
-Currently, I'm focused on post-training for large models using RL-based methods. I'm a core contributor to the open-source framework VerlTool and have been involved in the development of MiniMax-M1 on software engineering tasks. I've also worked as a Research Scientist Intern at MiniMax. 
+Currently, I'm focused on post-training for large models using RL-based methods. I'm a core contributor to the open-source framework VerlTool. I've also worked as a Research Scientist Intern at MiniMax on software engineering tasks. 
 
 ## Research Areas
 
 ### Agentic Post-Training
-I'm deeply involved in the full pipeline of post-training for software engineering agents. As a core contributor to **VerlTool**, I develop environment interaction modules and post-training setups for SWE tasks. My work on **MiniMax-M1** achieved 64% Pass@1 on SWE-Verified and ranked #2 on MultiSWE and TerminalBench. I've designed large-scale SWE data synthesis pipelines generating over 36K verifiable tasks from 5K+ sandbox environments.
+I'm deeply involved in the full pipeline of post-training for software engineering agents. As a core contributor to **VerlTool**, I develop environment interaction modules and post-training setups for SWE tasks. My work on **MiniMax-M2** achieved 69% Pass@1 on SWE-Verified and ranked #2 on MultiSWE and TerminalBench. I've designed large-scale SWE data synthesis pipelines generating over 36K verifiable tasks from 5K+ sandbox environments.
 
 I'm also working on **BrowserAgent**, which focuses on information-seeking tasks through direct browser environment interaction, moving beyond traditional tool-based approaches to enable more natural web navigation and information extraction.
 
