@@ -8,16 +8,20 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Zhiheng. Welcome to my personal website! I'm currently a second-year Master's student at the University of Waterloo, supervised by Professor Wenhu Chen at the TIGER Lab. My research focuses on **AI for Software Engineering**, particularly in agentic post-training, benchmarks, and causal reasoning.
+Hi, I'm Zhiheng. Welcome to my personal website! I will join the University of Illinois Urbana-Champaign (UIUC) as a Computer Science PhD student in Fall 2026, advised by Professor Lingming Zhang. My research focuses on **AI for Software Engineering**, particularly agentic post-training, evaluation, task synthesis, and causal reasoning.
 
-I did my undergrad in Computer Science at the University of Hong Kong, where I was active in algorithm competitions—I entered the ICPC World Finals and won two regional gold medals. I've had the privilege to work with research groups at Berkeley, ETH Zürich, and University of Michigan.
+I am completing my M.Math. in Computer Science at the University of Waterloo, where I am supervised by Professor Wenhu Chen at the TIGER Lab. I did my undergrad in Computer Science at the University of Hong Kong, where I was active in algorithm competitions—I entered the ICPC World Finals and won two regional gold medals. I've also had the privilege to work with research groups at Berkeley, ETH Zürich, and the University of Michigan.
 
-Currently, I'm focused on post-training for large models using RL-based methods. I'm a core contributor to the open-source framework VerlTool. I've also worked as a Research Scientist Intern at MiniMax on software engineering tasks. 
+## Previous Work
+
+From February to July 2026, I was an **Intern (Qingyun Program)** working on Tencent **WorkBuddy**, where I worked closely with [**Ke Li**](https://keli.info/) and [**Chao Peng**](https://chao-peng.github.io/). I was responsible for the team's evaluation platform and infrastructure, and explored how to synthesize realistic tasks from user data, including production traces and interaction trajectories.
+
+During this internship, we released [**Tencent WorkBuddy Bench**](https://arxiv.org/abs/2607.20911) ([code](https://github.com/Tencent/workbuddy-bench)), a contamination-resistant benchmark with 260 real-world tasks across Code, Web, Office, and Security. The benchmark evaluates coding agents across a broader range of computer-based work and provides domain-specific environments, tests, and evaluation tools.
 
 ## Research Areas
 
 ### Agentic Post-Training
-I'm deeply involved in the full pipeline of post-training for software engineering agents. As a core contributor to **VerlTool**, I develop environment interaction modules and post-training setups for SWE tasks. My work on **MiniMax-M2** achieved 69% Pass@1 on SWE-Verified and ranked #2 on MultiSWE and TerminalBench. I've designed large-scale SWE data synthesis pipelines generating over 36K verifiable tasks from 5K+ sandbox environments.
+I have been deeply involved in the full pipeline of post-training for software engineering agents. As a core contributor to **VerlTool**, I develop environment interaction modules and post-training setups for SWE tasks. During my internship at MiniMax, my work on **MiniMax-M2** achieved 69% Pass@1 on SWE-Verified and ranked #2 on MultiSWE and TerminalBench. I designed large-scale SWE data synthesis pipelines generating over 36K verifiable tasks from 5K+ sandbox environments.
 
 I'm also working on **BrowserAgent**, which focuses on information-seeking tasks through direct browser environment interaction, moving beyond traditional tool-based approaches to enable more natural web navigation and information extraction.
 
@@ -39,7 +43,7 @@ I've investigated how large language models understand causal relations through 
 
 I'm particularly interested in **AI for Software Engineering** because it combines structural data that's easy to synthesize, real-world relevance with immediate impact, and strong economic value. My research explores decomposing SWE tasks into skill-specific components: debugging, performance optimization, refactoring, test generation, repository-level QA, and security.
 
-For detailed future research directions, see my [Research Statements](/statements/) page. My complete background is in my [CV](https://cogito233.github.io/files/CV_short_Zhiheng.pdf).
+For detailed future research directions, see my [Research Statements](/statements/) page. My complete background is in my [CV](/files/CV.pdf).
 
 ## Publications
 
@@ -51,6 +55,4 @@ For detailed future research directions, see my [Research Statements](/statement
 
 ## Contact
 
-I'm currently seeking opportunities in industry related to AI for Software Engineering. If you have relevant positions or can provide recommendations, I would greatly appreciate it.
-
-Feel free to reach out at `z63lyu@uwaterloo.ca` for research collaboration, open source projects, job opportunities, or mentorship.
+Feel free to reach out at `zhihenglyu.cs@gmail.com` for research collaboration, open-source projects, or mentorship.
