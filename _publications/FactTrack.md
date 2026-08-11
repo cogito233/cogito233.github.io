@@ -5,7 +5,7 @@ permalink: /publication/FactTrack
 excerpt: 'A novel approach to tracking dynamic world states and detecting contradictions in story narratives'
 date: 2025-01-01
 venue: 'NAACL 2025 (Oral)'
-paperurl: 'https://arxiv.org/abs/placeholder'
+paperurl: 'https://arxiv.org/abs/2407.16347'
 citation: 'Lyu, Z., Yang, K., Kong, L., & Klein, D. (2025). FACTTRACK: Time-Aware World State Tracking in Story Outlines. NAACL 2025.'
 ---
 
@@ -13,7 +13,7 @@ We propose FactTrack, an algorithm that decomposes complex narratives into atomi
 
 The key innovation is our temporal fact tracking mechanism that maintains a dynamic world state throughout the narrative timeline, enabling detection of contradictions that emerge from the evolving story context.
 
-[Download paper here](https://arxiv.org/abs/placeholder)
+[Download paper here](https://arxiv.org/abs/2407.16347)
 
 Recommended citation:
 

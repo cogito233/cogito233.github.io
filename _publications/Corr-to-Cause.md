@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/Corr-to-Cause
 excerpt: "This research introduces the first benchmark dataset, Corr2Cause, to test large language models (LLMs) pure causal inference skills."
 date: 2023-06-01
-venue: ''
+venue: 'ICLR 2024'
 paperurl: 'https://arxiv.org/abs/2306.05836'
 citation: 'Jin Z, Liu J, Lyu Z, et al. Can Large Language Models Infer Causation from Correlation? arXiv preprint arXiv:2306.05836, 2023.'
 ---

@@ -1,4 +1,5 @@
 ---
+layout: home
 permalink: /
 title: "About Zhiheng"
 excerpt: "About me"
@@ -8,9 +9,9 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Zhiheng. Welcome to my personal website! I will join the University of Illinois Urbana-Champaign (UIUC) as a Computer Science PhD student in Fall 2026, advised by Professor Lingming Zhang. My research focuses on **AI for Software Engineering**, particularly agentic post-training, evaluation, task synthesis, and causal reasoning.
+Hi, I'm Zhiheng. Welcome to my personal website! This fall I'm joining the University of Illinois Urbana-Champaign (UIUC) as a Computer Science PhD student, advised by Professor Lingming Zhang. My research focuses on **AI for Software Engineering**, particularly agentic post-training, evaluation, task synthesis, and causal reasoning.
 
-I am completing my M.Math. in Computer Science at the University of Waterloo, where I am supervised by Professor Wenhu Chen at the TIGER Lab. I did my undergrad in Computer Science at the University of Hong Kong, where I was active in algorithm competitions—I entered the ICPC World Finals and won two regional gold medals. I've also had the privilege to work with research groups at Berkeley, ETH Zürich, and the University of Michigan.
+I completed my M.Math. in Computer Science at the University of Waterloo (2026), supervised by Professor Wenhu Chen at the TIGER Lab, with a thesis on post-training LLMs as software engineering agents. I did my undergrad in Computer Science at the University of Hong Kong, where I was active in algorithm competitions—I entered the ICPC World Finals and won two regional gold medals. I've also had the privilege to work with research groups at Berkeley, ETH Zürich, and the University of Michigan.
 
 ## Previous Work
 
@@ -18,21 +19,23 @@ From February to July 2026, I was an **Intern (Qingyun Program)** working on Ten
 
 During this internship, we released [**Tencent WorkBuddy Bench**](https://arxiv.org/abs/2607.20911) ([code](https://github.com/Tencent/workbuddy-bench)), a contamination-resistant benchmark with 260 real-world tasks across Code, Web, Office, and Security. The benchmark evaluates coding agents across a broader range of computer-based work and provides domain-specific environments, tests, and evaluation tools.
 
+From May 2025 to February 2026, I was a **Research Scientist Intern** on the base model team at **MiniMax**, contributing to code-agent post-training for **MiniMax M1, M2, M2.1, and M2.5**. M2 achieved 69% Pass@1 on SWE-bench Verified and ranked #2 on MultiSWE and TerminalBench. I led large-scale SWE data synthesis (36K verifiable tasks from 5K+ sandbox environments), built a rubric-based evaluation benchmark from live user feedback that became the core metric for diagnosing code-agent user experience, and led CodeMirror ToolScaling for M2.5 to help the model generalize across diverse scaffolding frameworks.
+
 ## Research Areas
 
 ### Agentic Post-Training
-I have been deeply involved in the full pipeline of post-training for software engineering agents. As a core contributor to **VerlTool**, I develop environment interaction modules and post-training setups for SWE tasks. During my internship at MiniMax, my work on **MiniMax-M2** achieved 69% Pass@1 on SWE-Verified and ranked #2 on MultiSWE and TerminalBench. I designed large-scale SWE data synthesis pipelines generating over 36K verifiable tasks from 5K+ sandbox environments.
+I have been deeply involved in the full pipeline of post-training for software engineering agents. As a co-first author and core developer of [**VerlTool**](https://github.com/TIGER-AI-Lab/verl-tool) (TMLR 2026; Best Paper Award at ICLR 2026 SPOT), I develop the stateful environment interaction protocol and SWE agent training pipeline. In my master's thesis, RLVR training took Qwen3-8B from 10.4% to 19.5% on SWE-bench Verified.
 
-I'm also working on **BrowserAgent**, which focuses on information-seeking tasks through direct browser environment interaction, moving beyond traditional tool-based approaches to enable more natural web navigation and information extraction.
+I also co-first authored [**SWE-Next**](https://arxiv.org/abs/2603.20691), an execution-grounded framework that mines 2,308 verifiable SWE tasks from 311 real repositories, and [**BrowserAgent**](https://arxiv.org/abs/2502.01882) (TMLR), which builds web agents through direct browser environment interaction rather than traditional tool-based approaches.
 
 ### Benchmarks & Evaluation
 I believe that as models get stronger, the definition of tasks becomes increasingly important. My benchmark work spans three approaches:
 
 - **Synthesis**: Converting existing data (PixelWorld converts textual reasoning to images, Corr2Cause generates causal reasoning problems)
-- **Human-in-the-loop**: Developing repo-level QA benchmarks with crowdsourced annotation and validation
-- **Structural data**: Building benchmarks from web pages and GitHub repositories
+- **Human-in-the-loop**: Repo-level QA with crowdsourced annotation and validation—[**SWE-QA-Pro**](https://arxiv.org/abs/2603.16124) (ACL 2026 Findings) builds a contamination-resistant repository-understanding benchmark where our trained 8B model surpasses GPT-4o
+- **Real-world tasks**: Building benchmarks from production scenarios and GitHub repositories, such as WorkBuddy Bench
 
-I've contributed to **StructEval** for structured output evaluation and **VideoScore** for video generation assessment.
+I've also contributed to **StructEval** for structured output evaluation and **VideoScore** for video generation assessment.
 
 ### Causal Reasoning & Knowledge Methods
 My work explores lightweight ways to enhance LLM capabilities without retraining. At Berkeley, I developed **FactTrack** for time-aware world state tracking in story outlines, decomposing complex narratives into atomic facts for contradiction detection.

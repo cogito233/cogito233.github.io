@@ -3,9 +3,9 @@ title: "PixelWorld: Towards Perceiving Everything as Pixels"
 collection: publications
 permalink: /publication/PixelWorld
 excerpt: 'Converting textual reasoning data into images to probe vision-language model reasoning capabilities'
-date: 2025-01-01
+date: 2025-01-31
 venue: 'TMLR'
-paperurl: 'https://arxiv.org/abs/placeholder'
+paperurl: 'https://arxiv.org/abs/2501.19339'
 citation: 'Lyu, Z., Ma, X., & Chen, W. (2025). PixelWorld: Towards Perceiving Everything as Pixels. Transactions on Machine Learning Research.'
 ---
 
@@ -13,7 +13,7 @@ PixelWorld investigates reasoning mechanisms in vision-language models (VLMs) ac
 
 This work explores how VLMs handle structured reasoning when information is presented visually rather than textually, providing insights into cross-modal reasoning capabilities and limitations.
 
-[Download paper here](https://arxiv.org/abs/placeholder)
+[Download paper here](https://arxiv.org/abs/2501.19339)
 
 Recommended citation:
 

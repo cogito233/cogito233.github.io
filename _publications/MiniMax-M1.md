@@ -3,9 +3,9 @@ title: "MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attenti
 collection: publications
 permalink: /publication/MiniMax-M1
 excerpt: 'Technical report on MiniMax-M1 model with focus on software engineering capabilities and test-time compute scaling'
-date: 2025-01-01
+date: 2025-06-16
 venue: 'Technical Report'
-paperurl: 'https://arxiv.org/abs/placeholder'
+paperurl: 'https://arxiv.org/abs/2506.13585'
 citation: 'MiniMax. (2025). MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention. Technical Report.'
 ---
 
@@ -13,7 +13,7 @@ This technical report describes the MiniMax-M1 model, focusing on efficient scal
 
 Key contributions include the development of a large-scale SWE data synthesis pipeline generating over 36K verifiable tasks from 5K+ sandbox environments, and novel approaches to post-training for software engineering agents.
 
-[Download paper here](https://arxiv.org/abs/placeholder)
+[Download paper here](https://arxiv.org/abs/2506.13585)
 
 Recommended citation:
 
