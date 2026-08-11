@@ -1,6 +1,7 @@
 ---
 title: "MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention"
 collection: publications
+selected: false
 permalink: /publication/MiniMax-M1
 excerpt: 'Technical report on MiniMax-M1 model with focus on software engineering capabilities and test-time compute scaling'
 date: 2025-06-16

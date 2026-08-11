@@ -1,6 +1,7 @@
 ---
 title: "Psychologically-Inspired Causal Prompts."
 collection: publications
+selected: false
 permalink: /publication/Causal-Prompt
 excerpt: 'Verbalizing three causal mechanisms of sentiment classification into prompts to study how causal structure affects LLM behavior'
 date: 2023-05-01

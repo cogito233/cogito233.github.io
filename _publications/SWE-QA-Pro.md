@@ -1,6 +1,7 @@
 ---
 title: "SWE-QA-Pro: A Representative Benchmark and Scalable Training Recipe for Repository-Level Code Understanding"
 collection: publications
+selected: true
 permalink: /publication/SWE-QA-Pro
 excerpt: 'A contamination-resistant benchmark for agentic repository-level code understanding, plus a training recipe that lets an 8B model surpass GPT-4o.'
 date: 2026-03-17

@@ -9,51 +9,46 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Zhiheng. Welcome to my personal website! This fall I'm joining the University of Illinois Urbana-Champaign (UIUC) as a Computer Science PhD student, advised by Professor Lingming Zhang. My research focuses on **AI for Software Engineering**, particularly agentic post-training, evaluation, task synthesis, and causal reasoning.
+Hi, I'm Zhiheng. Welcome to my personal website! This fall I'm joining the University of Illinois Urbana-Champaign (UIUC) as a Computer Science PhD student, advised by Professor Lingming Zhang. My research focuses on **AI for Software Engineering**, particularly agentic post-training, evaluation, and task synthesis.
 
-I completed my M.Math. in Computer Science at the University of Waterloo (2026), supervised by Professor Wenhu Chen at the TIGER Lab, with a thesis on post-training LLMs as software engineering agents. I did my undergrad in Computer Science at the University of Hong Kong, where I was active in algorithm competitions—I entered the ICPC World Finals and won two regional gold medals. I've also had the privilege to work with research groups at Berkeley, ETH Zürich, and the University of Michigan.
+I completed my M.Math. in Computer Science at the University of Waterloo (2026), supervised by Professor Wenhu Chen at the TIGER Lab, with a thesis on post-training LLMs as software engineering agents. Before that, I did my undergrad at the University of Hong Kong, where I entered the **ICPC World Finals** and won two regional gold medals, and worked with research groups at Berkeley, ETH Zürich, and the University of Michigan.
 
-## Previous Work
+## Highlights
 
-From February to July 2026, I was an **Intern (Qingyun Program)** working on Tencent **WorkBuddy**, where I worked closely with [**Ke Li**](https://keli.info/) and [**Chao Peng**](https://chao-peng.github.io/). I was responsible for the team's evaluation platform and infrastructure, and explored how to synthesize realistic tasks from user data, including production traces and interaction trajectories.
+<ul class="highlights">
+  <li><span class="hl__date">Aug 2026</span><span>Joining <strong>UIUC</strong> as a CS PhD student, advised by Prof. Lingming Zhang.</span></li>
+  <li><span class="hl__date">Jul 2026</span><span>Released <a href="https://arxiv.org/abs/2607.20911"><strong>Tencent WorkBuddy Bench</strong></a> — 260 contamination-resistant real-world tasks across Code, Web, Office, and Security.</span></li>
+  <li><span class="hl__date">Jun 2026</span><span><a href="https://github.com/TIGER-AI-Lab/verl-tool"><strong>VerlTool</strong></a> accepted to TMLR 2026, after winning the <span class="hl__award">Best Paper Award at ICLR 2026 SPOT</span>.</span></li>
+  <li><span class="hl__date">May 2026</span><span><a href="https://arxiv.org/abs/2605.26494"><strong>MiniMax-M2</strong></a> tech report released — <strong>69% Pass@1 on SWE-bench Verified</strong>, #2 on MultiSWE and TerminalBench.</span></li>
+  <li><span class="hl__date">May 2026</span><span><a href="https://arxiv.org/abs/2603.16124"><strong>SWE-QA-Pro</strong></a> accepted to <strong>ACL 2026 Findings</strong> — our trained 8B model surpasses GPT-4o on repository-level QA.</span></li>
+</ul>
 
-During this internship, we released [**Tencent WorkBuddy Bench**](https://arxiv.org/abs/2607.20911) ([code](https://github.com/Tencent/workbuddy-bench)), a contamination-resistant benchmark with 260 real-world tasks across Code, Web, Office, and Security. The benchmark evaluates coding agents across a broader range of computer-based work and provides domain-specific environments, tests, and evaluation tools.
+## Experience
 
-From May 2025 to February 2026, I was a **Research Scientist Intern** on the base model team at **MiniMax**, contributing to code-agent post-training for [**MiniMax M1, M2, M2.1, and M2.5**](https://arxiv.org/abs/2605.26494). M2 achieved 69% Pass@1 on SWE-bench Verified and ranked #2 on MultiSWE and TerminalBench. I led large-scale SWE data synthesis (36K verifiable tasks from 5K+ sandbox environments), built a rubric-based evaluation benchmark from live user feedback that became the core metric for diagnosing code-agent user experience, and led CodeMirror ToolScaling for M2.5 to help the model generalize across diverse scaffolding frameworks.
+**Tencent** (Feb – Jul 2026) — Intern (Qingyun Program) on **WorkBuddy**, working closely with [Ke Li](https://keli.info/) and [Chao Peng](https://chao-peng.github.io/). I owned the team's evaluation platform and infrastructure (**3× evaluation volume**), explored task synthesis from production user data, and co-led the release of [**Tencent WorkBuddy Bench**](https://arxiv.org/abs/2607.20911) ([code](https://github.com/Tencent/workbuddy-bench)).
 
-## Research Areas
+**MiniMax** (May 2025 – Feb 2026) — Research Scientist Intern on the base model team, contributing to code-agent post-training for [**MiniMax M1 through M2.5**](https://arxiv.org/abs/2605.26494). M2 achieved **69% Pass@1 on SWE-bench Verified** (#2 on MultiSWE and TerminalBench). I led large-scale SWE data synthesis (**36K verifiable tasks** from 5K+ sandbox environments), built the rubric-based evaluation benchmark that became the team's core metric for code-agent user experience, and led CodeMirror ToolScaling for M2.5.
+
+## Research
 
 ### Agentic Post-Training
-I have been deeply involved in the full pipeline of post-training for software engineering agents. As a co-first author and core developer of [**VerlTool**](https://github.com/TIGER-AI-Lab/verl-tool) (TMLR 2026; Best Paper Award at ICLR 2026 SPOT), I develop the stateful environment interaction protocol and SWE agent training pipeline. In my master's thesis, RLVR training took Qwen3-8B from 10.4% to 19.5% on SWE-bench Verified.
 
-I also co-first authored [**SWE-Next**](https://arxiv.org/abs/2603.20691), an execution-grounded framework that mines 2,308 verifiable SWE tasks from 311 real repositories, and [**BrowserAgent**](https://arxiv.org/abs/2502.01882) (TMLR), which builds web agents through direct browser environment interaction rather than traditional tool-based approaches.
+I work on the full pipeline of post-training for software engineering agents. As a co-first author and core developer of [**VerlTool**](https://github.com/TIGER-AI-Lab/verl-tool) (TMLR 2026; **Best Paper Award at ICLR 2026 SPOT**), I built the stateful environment interaction protocol and SWE agent training pipeline. In my master's thesis, RLVR training took Qwen3-8B from **10.4% to 19.5%** on SWE-bench Verified. I also co-first authored [**SWE-Next**](https://arxiv.org/abs/2603.20691) (2,308 verifiable tasks mined from 311 real repositories) and [**BrowserAgent**](https://arxiv.org/abs/2502.01882) (TMLR).
 
 ### Benchmarks & Evaluation
-I believe that as models get stronger, the definition of tasks becomes increasingly important. My benchmark work spans three approaches:
 
-- **Synthesis**: Converting existing data (PixelWorld converts textual reasoning to images, Corr2Cause generates causal reasoning problems)
-- **Human-in-the-loop**: Repo-level QA with crowdsourced annotation and validation—[**SWE-QA-Pro**](https://arxiv.org/abs/2603.16124) (ACL 2026 Findings) builds a contamination-resistant repository-understanding benchmark where our trained 8B model surpasses GPT-4o
-- **Real-world tasks**: Building benchmarks from production scenarios and GitHub repositories, such as WorkBuddy Bench
+As models get stronger, the definition of tasks becomes increasingly important. [**SWE-QA-Pro**](https://arxiv.org/abs/2603.16124) (ACL 2026 Findings) builds a contamination-resistant repository-understanding benchmark from long-tail repositories; [**WorkBuddy Bench**](https://arxiv.org/abs/2607.20911) reconstructs real-world tasks from production scenarios; [**PixelWorld**](https://arxiv.org/abs/2501.19339) (TMLR) probes reasoning by converting text into pixels.
 
-I've also contributed to **StructEval** for structured output evaluation and **VideoScore** for video generation assessment.
+<p class="dim">Earlier, I worked on causal reasoning and knowledge methods for LLMs: <a href="https://arxiv.org/abs/2407.16347">FactTrack</a> (NAACL 2025 Oral) for time-aware world state tracking in story outlines, <a href="https://arxiv.org/abs/2306.05836">Corr2Cause</a> (ICLR 2024) for testing pure causal inference, and psychologically-inspired causal prompting. I also contributed to StructEval and VideoScore.</p>
 
-### Causal Reasoning & Knowledge Methods
-My work explores lightweight ways to enhance LLM capabilities without retraining. At Berkeley, I developed **FactTrack** for time-aware world state tracking in story outlines, decomposing complex narratives into atomic facts for contradiction detection.
+For future research directions, see my [Research Statements](/statements/); my complete background is in my [CV](/files/CV.pdf).
 
-I've investigated how large language models understand causal relations through **Psychologically-Inspired Causal Prompts**, exploring different psychological processes in sentiment classification. The **Corr2Cause** dataset tests pure causal inference skills of LLMs.
-
-## Current Focus
-
-I'm particularly interested in **AI for Software Engineering** because it combines structural data that's easy to synthesize, real-world relevance with immediate impact, and strong economic value. My research explores decomposing SWE tasks into skill-specific components: debugging, performance optimization, refactoring, test generation, repository-level QA, and security.
-
-For detailed future research directions, see my [Research Statements](/statements/) page. My complete background is in my [CV](/files/CV.pdf).
-
-## Publications
+## Selected Publications
 
 {% include base_path %}
 
 <div class="pub-list">
-{% assign pubs = site.publications | sort: 'date' | reverse %}
+{% assign pubs = site.publications | where: "selected", true | sort: 'date' | reverse %}
 {% for pub in pubs %}
   <div class="pub">
     <a class="pub__title" href="{{ base_path }}{{ pub.url }}">{{ pub.title }}</a>
@@ -62,6 +57,8 @@ For detailed future research directions, see my [Research Statements](/statement
   </div>
 {% endfor %}
 </div>
+
+<p class="pub-list__more"><a href="{{ base_path }}/publications/">Full publication list →</a></p>
 
 ## Contact
 

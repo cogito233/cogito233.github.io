@@ -1,6 +1,7 @@
 ---
 title: "The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence"
 collection: publications
+selected: true
 permalink: /publication/MiniMax-M2
 excerpt: 'Technical report on the MiniMax-M2 MoE series (229.9B total / 9.8B active), built end-to-end for agentic deployment. 69% Pass@1 on SWE-bench Verified, #2 on MultiSWE and TerminalBench.'
 date: 2026-05-26

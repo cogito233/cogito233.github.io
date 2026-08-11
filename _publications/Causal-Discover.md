@@ -1,6 +1,7 @@
 ---
 title: "Can Large Language Models Distinguish Cause from Effect?"
 collection: publications
+selected: false
 permalink: /publication/Causal-Discover
 excerpt: 'Our paper conducts a post-hoc analysis to check whether large language models can be used to distinguish cause from effect.'
 date: 2023-05-06

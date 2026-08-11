@@ -1,6 +1,7 @@
 ---
 title: "SWE-Next: Scalable Real-World Software Engineering Tasks for Agents"
 collection: publications
+selected: true
 permalink: /publication/SWE-Next
 excerpt: 'An execution-grounded framework for scalable SWE task and trajectory collection: 2,308 verifiable tasks mined from 311 real repositories.'
 date: 2026-03-21

@@ -1,6 +1,7 @@
 ---
 title: "FACTTRACK: Time-Aware World State Tracking in Story Outlines"
 collection: publications
+selected: true
 permalink: /publication/FactTrack
 excerpt: 'A novel approach to tracking dynamic world states and detecting contradictions in story narratives'
 date: 2025-01-01

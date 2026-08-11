@@ -1,6 +1,7 @@
 ---
 title: "BrowserAgent: Building Web Agents with Human-Inspired Web Browsing Actions"
 collection: publications
+selected: true
 permalink: /publication/BrowserAgent
 excerpt: 'A framework for training web agents that directly interact with browser environments for information-seeking tasks'
 date: 2025-02-04

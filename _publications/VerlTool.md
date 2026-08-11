@@ -1,6 +1,7 @@
 ---
 title: "VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use"
 collection: publications
+selected: true
 permalink: /publication/VerlTool
 excerpt: 'A unified, easy-to-extend tool-agent RL training framework based on verl, supporting agentic RL across code, search, SQL, and SWE environments.'
 date: 2025-09-02

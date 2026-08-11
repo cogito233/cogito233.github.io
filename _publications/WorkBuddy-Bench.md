@@ -1,6 +1,7 @@
 ---
 title: "Tencent WorkBuddy Bench: A Multi-Domain Coding-Agent Benchmark with Contamination-Resistant Task Construction"
 collection: publications
+selected: true
 permalink: /publication/WorkBuddy-Bench
 excerpt: 'An open benchmark of 260 contamination-resistant, real-world tasks spanning Code, Web, Office, and Security.'
 date: 2026-07-23

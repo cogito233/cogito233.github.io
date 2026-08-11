@@ -1,6 +1,7 @@
 ---
 title: "Logical Fallacy Detection"
 collection: publications
+selected: false
 permalink: /publication/Logical-Fallacy-Detection
 excerpt: 'A dataset for logical fallacy detection (LOGIC and LOGICCLIMATE) with a structure-aware baseline model'
 date: 2022-02-01

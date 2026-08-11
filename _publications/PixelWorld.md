@@ -1,6 +1,7 @@
 ---
 title: "PixelWorld: Towards Perceiving Everything as Pixels"
 collection: publications
+selected: true
 permalink: /publication/PixelWorld
 excerpt: 'Converting textual reasoning data into images to probe vision-language model reasoning capabilities'
 date: 2025-01-31

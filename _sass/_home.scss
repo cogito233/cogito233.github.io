@@ -1,8 +1,8 @@
 /* ==========================================================================
-   MINIMAL ACADEMIC HOMEPAGE
-   Typography-first, single column — in the spirit of the classic
-   academic homepages (Jon Barron et al.): white background, one accent
-   color, no boxes.
+   MINIMAL ACADEMIC SKIN
+   Typography-first, in the spirit of the classic academic homepages
+   (Jon Barron et al.): white background, one accent color, no boxes.
+   Applies site-wide; the homepage gets its own intro layout on top.
    ========================================================================== */
 
 $acad-font: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -12,12 +12,12 @@ $acad-muted: #7a828c;
 $acad-link: #1772d0;
 $acad-link-hover: #f09228;
 $acad-rule: #e8eaed;
+$acad-venue: #8c1d18;
 
-#main.home {
-  float: none;
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0 1.4rem 3rem;
+/* ---- Global: every page under #main ---- */
+
+#main {
+  max-width: 1020px;
   color: $acad-body;
   font-family: $acad-font;
 
@@ -31,7 +31,221 @@ $acad-rule: #e8eaed;
     }
   }
 
-  /* ---- Intro: text left, portrait right ---- */
+  .page__title {
+    color: $acad-ink;
+    font-family: $acad-font;
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+
+  .page__content,
+  .archive {
+    font-family: $acad-font;
+    font-size: 1.02rem;
+
+    p,
+    li {
+      color: $acad-body;
+      line-height: 1.75;
+    }
+
+    strong {
+      color: $acad-ink;
+    }
+
+    h2 {
+      clear: both;
+      margin: 3rem 0 1.1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $acad-rule;
+      color: $acad-ink;
+      font-family: $acad-font;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      margin: 1.9rem 0 0.5rem;
+      color: $acad-ink;
+      font-family: $acad-font;
+      font-size: 1.06rem;
+      font-weight: 700;
+    }
+
+    ul {
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+
+    code {
+      background: #f4f5f7;
+      font-size: 0.85em;
+    }
+  }
+
+  /* Author-profile sidebar on interior pages */
+
+  .sidebar {
+    font-family: $acad-font;
+    opacity: 1;
+
+    .author__avatar img {
+      max-width: 130px;
+      border: 0;
+      border-radius: 50%;
+    }
+
+    .author__name {
+      color: $acad-ink;
+      font-family: $acad-font;
+    }
+
+    .author__bio {
+      color: $acad-muted;
+      font-size: 0.85rem;
+    }
+
+    .author__urls a {
+      color: $acad-body;
+
+      &:hover {
+        color: $acad-link-hover;
+        text-decoration: none;
+      }
+    }
+
+    .author__urls.social-icons .fa {
+      color: $acad-muted;
+    }
+  }
+
+  /* Hide social share buttons — visual noise on publication pages */
+
+  .page__share {
+    display: none;
+  }
+
+  /* De-emphasized prose (earlier work, footnote-ish content) */
+
+  .dim {
+    color: $acad-muted;
+    font-size: 0.93rem;
+
+    strong {
+      color: $acad-muted;
+    }
+
+    a {
+      color: darken($acad-muted, 12%);
+      text-decoration: underline;
+      text-decoration-color: rgba($acad-muted, 0.4);
+
+      &:hover {
+        color: $acad-link-hover;
+      }
+    }
+  }
+
+  /* ---- Highlights: date + fact rows ---- */
+
+  .highlights {
+    margin: 0.4rem 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 0.55rem;
+      line-height: 1.6;
+    }
+
+    .hl__date {
+      flex: 0 0 4.6rem;
+      color: $acad-muted;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 2;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .hl__award {
+      color: $acad-venue;
+      font-weight: 700;
+    }
+  }
+
+  /* ---- Publication rows (homepage + publications page) ---- */
+
+  .pub-list {
+    margin-top: 0.4rem;
+  }
+
+  .pub {
+    margin: 0 -0.75rem 0.4rem;
+    padding: 0.7rem 0.75rem;
+    border-radius: 8px;
+    transition: background-color 0.12s ease;
+
+    &:hover {
+      background: #f7f9fc;
+    }
+  }
+
+  .pub__title {
+    display: inline;
+    color: $acad-link;
+    font-size: 1.01rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .pub__excerpt {
+    margin: 0.2rem 0 0.15rem;
+    color: $acad-muted;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .pub__meta {
+    margin: 0;
+    color: $acad-muted;
+    font-size: 0.85rem;
+
+    a {
+      font-weight: 700;
+    }
+  }
+
+  .pub__venue {
+    color: $acad-venue;
+    font-style: italic;
+  }
+
+  .pub-list__more {
+    margin: 0.6rem 0 0;
+    font-size: 0.94rem;
+
+    a {
+      font-weight: 700;
+    }
+  }
+}
+
+/* ---- Homepage layout ---- */
+
+#main.home {
+  float: none;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.4rem 3rem;
 
   .home-intro {
     display: flex;
@@ -87,112 +301,16 @@ $acad-rule: #e8eaed;
     }
   }
 
-  /* ---- Body typography ---- */
-
   .home-content {
     float: none;
     width: auto;
     max-width: none;
     padding: 0;
-    font-family: $acad-font;
-    font-size: 1.02rem;
-
-    p,
-    li {
-      color: $acad-body;
-      line-height: 1.75;
-    }
 
     > p:first-child {
       font-size: 1.06rem;
     }
-
-    strong {
-      color: $acad-ink;
-    }
-
-    h2 {
-      clear: both;
-      margin: 3rem 0 1.1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid $acad-rule;
-      color: $acad-ink;
-      font-family: $acad-font;
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-
-    h3 {
-      margin: 1.9rem 0 0.5rem;
-      color: $acad-ink;
-      font-family: $acad-font;
-      font-size: 1.06rem;
-      font-weight: 700;
-    }
-
-    ul {
-      padding-left: 1.3rem;
-    }
-
-    li {
-      margin-bottom: 0.35rem;
-    }
-
-    code {
-      background: #f4f5f7;
-      font-size: 0.85em;
-    }
   }
-
-  /* ---- Publications: clean rows, no cards ---- */
-
-  .pub-list {
-    margin-top: 0.4rem;
-  }
-
-  .pub {
-    margin: 0 -0.75rem 0.4rem;
-    padding: 0.7rem 0.75rem;
-    border-radius: 8px;
-    transition: background-color 0.12s ease;
-
-    &:hover {
-      background: #f7f9fc;
-    }
-  }
-
-  .pub__title {
-    display: inline;
-    color: $acad-link;
-    font-size: 1.01rem;
-    font-weight: 700;
-    line-height: 1.4;
-  }
-
-  .pub__excerpt {
-    margin: 0.2rem 0 0.15rem;
-    color: $acad-muted;
-    font-size: 0.92rem;
-    line-height: 1.55;
-  }
-
-  .pub__meta {
-    margin: 0;
-    color: $acad-muted;
-    font-size: 0.85rem;
-
-    a {
-      font-weight: 700;
-    }
-  }
-
-  .pub__venue {
-    color: #8c1d18;
-    font-style: italic;
-  }
-
-  /* ---- Responsive ---- */
 
   @include breakpoint(max-width $medium) {
     .home-intro {
@@ -214,10 +332,16 @@ $acad-rule: #e8eaed;
       width: 150px;
       height: 150px;
     }
+
+    .highlights li {
+      flex-direction: column;
+      gap: 0;
+      text-align: left;
+    }
   }
 }
 
-/* Align the top navigation with the content column */
+/* ---- Top navigation aligned with the content column ---- */
 
 .masthead {
   border-bottom: 1px solid $acad-rule;
