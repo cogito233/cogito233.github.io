@@ -9,16 +9,16 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Zhiheng. Welcome to my personal website! This fall I'm joining the University of Illinois Urbana-Champaign (UIUC) as a Computer Science PhD student, advised by Professor Lingming Zhang. My research focuses on **AI for Software Engineering**, particularly agentic post-training, evaluation, and task synthesis.
+Hi, I'm Zhiheng. Welcome to my personal website! This fall I'm joining the University of Illinois Urbana-Champaign (UIUC) as a Computer Science PhD student, advised by Professor [Lingming Zhang](http://lingming.cs.illinois.edu/). My research focuses on **AI for Software Engineering**, particularly agentic post-training, evaluation, and task synthesis.
 
-I completed my M.Math. in Computer Science at the University of Waterloo (2026), supervised by Professor Wenhu Chen at the TIGER Lab, with a thesis on post-training LLMs as software engineering agents. Before that, I did my undergrad at the University of Hong Kong, where I entered the **ICPC World Finals** and won two regional gold medals, and worked with research groups at Berkeley, ETH Zürich, and the University of Michigan.
+I completed my M.Math. in Computer Science at the University of Waterloo (2026), supervised by Professor [Wenhu Chen](https://wenhuchen.github.io/) at the [TIGER Lab](https://tiger-ai-lab.github.io/), with a thesis on post-training LLMs as software engineering agents. Before that, I did my undergrad at the University of Hong Kong, where I entered the **ICPC World Finals** and won two regional gold medals, and worked with research groups at Berkeley, ETH Zürich, and the University of Michigan.
 
 ## Highlights
 
 <ul class="highlights">
-  <li><span class="hl__date">Aug 2026</span><span>Joining <strong>UIUC</strong> as a CS PhD student, advised by Prof. Lingming Zhang.</span></li>
+  <li><span class="hl__date">Aug 2026</span><span>Joining <strong>UIUC</strong> as a CS PhD student, advised by Prof. <a href="http://lingming.cs.illinois.edu/">Lingming Zhang</a>.</span></li>
   <li><span class="hl__date">Jul 2026</span><span>Released <a href="https://arxiv.org/abs/2607.20911"><strong>Tencent WorkBuddy Bench</strong></a> — 260 contamination-resistant real-world tasks across Code, Web, Office, and Security.</span></li>
-  <li><span class="hl__date">Jun 2026</span><span><a href="https://github.com/TIGER-AI-Lab/verl-tool"><strong>VerlTool</strong></a> accepted to TMLR 2026, after winning the <span class="hl__award">Best Paper Award at ICLR 2026 SPOT</span>.</span></li>
+  <li><span class="hl__date">Jun 2026</span><span><a href="https://arxiv.org/abs/2509.01055"><strong>VerlTool</strong></a> accepted to <a href="https://jmlr.org/tmlr/">TMLR</a>, after winning the <span class="hl__award">Best Paper Award</span> at the <a href="https://spoticlr.github.io/">SPOT Workshop @ ICLR 2026</a>.</span></li>
   <li><span class="hl__date">May 2026</span><span><a href="https://arxiv.org/abs/2605.26494"><strong>MiniMax-M2</strong></a> tech report released — <strong>69% Pass@1 on SWE-bench Verified</strong>, #2 on MultiSWE and TerminalBench.</span></li>
   <li><span class="hl__date">May 2026</span><span><a href="https://arxiv.org/abs/2603.16124"><strong>SWE-QA-Pro</strong></a> accepted to <strong>ACL 2026 Findings</strong> — our trained 8B model surpasses GPT-4o on repository-level QA.</span></li>
 </ul>
@@ -33,7 +33,7 @@ I completed my M.Math. in Computer Science at the University of Waterloo (2026),
 
 ### Agentic Post-Training
 
-I work on the full pipeline of post-training for software engineering agents. As a co-first author and core developer of [**VerlTool**](https://github.com/TIGER-AI-Lab/verl-tool) (TMLR 2026; **Best Paper Award at ICLR 2026 SPOT**), I built the stateful environment interaction protocol and SWE agent training pipeline. In my master's thesis, RLVR training took Qwen3-8B from **10.4% to 19.5%** on SWE-bench Verified. I also co-first authored [**SWE-Next**](https://arxiv.org/abs/2603.20691) (2,308 verifiable tasks mined from 311 real repositories) and [**BrowserAgent**](https://arxiv.org/abs/2502.01882) (TMLR).
+I work on the full pipeline of post-training for software engineering agents. As a co-first author and core developer of [**VerlTool**](https://github.com/TIGER-AI-Lab/verl-tool) (TMLR 2026; **Best Paper Award** at the [SPOT Workshop @ ICLR 2026](https://spoticlr.github.io/)), I built the stateful environment interaction protocol and SWE agent training pipeline. In my master's thesis, RLVR training took Qwen3-8B from **10.4% to 19.5%** on SWE-bench Verified. I also co-first authored [**SWE-Next**](https://arxiv.org/abs/2603.20691) (2,308 verifiable tasks mined from 311 real repositories) and [**BrowserAgent**](https://arxiv.org/abs/2502.01882) (TMLR).
 
 ### Benchmarks & Evaluation
 
