@@ -51,9 +51,9 @@ For future research directions, see my [Research Statements](/statements/); my c
 {% assign pubs = site.publications | where: "selected", true | sort: 'date' | reverse %}
 {% for pub in pubs %}
   <div class="pub">
-    <a class="pub__title" href="{{ base_path }}{{ pub.url }}">{{ pub.title }}</a>
+    <a class="pub__title" href="{% if pub.paperurl and pub.paperurl != '' %}{{ pub.paperurl }}{% else %}{{ base_path }}{{ pub.url }}{% endif %}">{{ pub.title }}</a>
     <p class="pub__excerpt">{{ pub.excerpt | markdownify | strip_html | strip_newlines }}</p>
-    <p class="pub__meta">{% if pub.venue and pub.venue != '' %}<span class="pub__venue">{{ pub.venue }}</span> &middot; {% endif %}{{ pub.date | date: "%Y" }}{% if pub.paperurl and pub.paperurl != '' %} &middot; <a href="{{ pub.paperurl }}">paper</a>{% endif %}</p>
+    <p class="pub__meta">{% if pub.venue and pub.venue != '' %}<span class="pub__venue">{{ pub.venue }}</span> &middot; {% endif %}{{ pub.date | date: "%Y" }}</p>
   </div>
 {% endfor %}
 </div>
