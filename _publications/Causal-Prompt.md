@@ -2,7 +2,7 @@
 title: "Psychologically-Inspired Causal Prompts."
 collection: publications
 permalink: /publication/Causal-Prompt
-excerpt: 'This paper is about a prompting method embedded causal direction and analyze the performance gap of LLMs'
+excerpt: 'Verbalizing three causal mechanisms of sentiment classification into prompts to study how causal structure affects LLM behavior'
 date: 2023-05-01
 venue: ''
 paperurl: 'https://arxiv.org/pdf/2305.01764'

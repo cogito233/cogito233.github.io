@@ -4,38 +4,30 @@ layout: default
 
 {% include base_path %}
 
-<main id="main" class="home" role="main">
-  <section class="home__hero" aria-labelledby="home-title">
-    <div class="home__hero-copy">
-      <p class="home__eyebrow">Incoming CS PhD · UIUC · Fall 2026</p>
-      <h1 id="home-title">{{ site.author.name }}</h1>
-      <p class="home__lead">I build and evaluate software-engineering agents, with a focus on post-training, realistic task synthesis, and reliable evaluation.</p>
-      <ul class="home__focus" aria-label="Research focus">
-        <li>Agent Post-Training</li>
-        <li>Evaluation</li>
-        <li>Task Synthesis</li>
-      </ul>
-      <div class="home__actions">
-        <a class="home__button home__button--primary" href="{{ base_path }}/publications/">Publications</a>
-        <a class="home__button" href="{{ base_path }}/files/CV.pdf">CV</a>
-        <a class="home__button" href="mailto:{{ site.author.email }}">Email</a>
-      </div>
-    </div>
-    <div class="home__hero-mark" aria-hidden="true">
-      <span>AI</span>
-      <span>×</span>
-      <span>SE</span>
-    </div>
-  </section>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-  <div class="home__body">
-    {% include sidebar.html %}
+<main id="main" class="home" role="main" itemscope itemtype="http://schema.org/Person">
+  <header class="home-intro">
+    <div class="home-intro__text">
+      <h1 class="home-intro__name" itemprop="name">{{ site.author.name }}</h1>
+      <p class="home-intro__tagline">Incoming CS PhD student at UIUC &middot; AI for Software Engineering</p>
+      <p class="home-intro__links">
+        <a href="mailto:{{ site.author.email }}">Email</a><span> / </span>
+        <a href="{{ base_path }}/files/CV.pdf">CV</a><span> / </span>
+        <a href="{{ site.author.googlescholar }}">Google&nbsp;Scholar</a><span> / </span>
+        <a href="https://github.com/{{ site.author.github }}">GitHub</a><span> / </span>
+        <a href="https://twitter.com/{{ site.author.twitter }}">Twitter</a><span> / </span>
+        <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>
+      </p>
+    </div>
+    <div class="home-intro__photo">
+      <img src="{{ base_path }}/images/{{ site.author.avatar }}" alt="Portrait of {{ site.author.name }}" itemprop="image">
+    </div>
+  </header>
 
-    <article class="home__article" itemscope itemtype="http://schema.org/Person">
-      {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-      <section class="page__content" itemprop="description">
-        {{ content }}
-      </section>
-    </article>
+  <div class="home-content page__content" itemprop="description">
+    {{ content }}
   </div>
 </main>

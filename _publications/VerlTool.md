@@ -2,7 +2,7 @@
 title: "VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use"
 collection: publications
 permalink: /publication/VerlTool
-excerpt: 'A unified, easy-to-extend tool-agent RL training framework based on verl. TMLR 2026; Best Paper Award at ICLR 2026 SPOT.'
+excerpt: 'A unified, easy-to-extend tool-agent RL training framework based on verl, supporting agentic RL across code, search, SQL, and SWE environments.'
 date: 2025-09-02
 venue: 'TMLR 2026 · Best Paper Award @ ICLR 2026 SPOT'
 paperurl: 'https://arxiv.org/abs/2509.01055'

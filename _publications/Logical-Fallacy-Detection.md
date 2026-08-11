@@ -2,7 +2,7 @@
 title: "Logical Fallacy Detection"
 collection: publications
 permalink: /publication/Logical-Fallacy-Detection
-excerpt: 'This paper is about the a dataset of Logical Fallacy Detection and its baseline model'
+excerpt: 'A dataset for logical fallacy detection (LOGIC and LOGICCLIMATE) with a structure-aware baseline model'
 date: 2022-02-01
 venue: ''
 paperurl: 'https://arxiv.org/abs/2202.13758'
