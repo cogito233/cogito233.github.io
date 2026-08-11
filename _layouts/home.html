@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<main id="main" class="home" role="main">
+  <section class="home__hero" aria-labelledby="home-title">
+    <div class="home__hero-copy">
+      <p class="home__eyebrow">Incoming CS PhD · UIUC · Fall 2026</p>
+      <h1 id="home-title">{{ site.author.name }}</h1>
+      <p class="home__lead">I build and evaluate software-engineering agents, with a focus on post-training, realistic task synthesis, and reliable evaluation.</p>
+      <ul class="home__focus" aria-label="Research focus">
+        <li>Agent Post-Training</li>
+        <li>Evaluation</li>
+        <li>Task Synthesis</li>
+      </ul>
+      <div class="home__actions">
+        <a class="home__button home__button--primary" href="{{ base_path }}/publications/">Publications</a>
+        <a class="home__button" href="{{ base_path }}/files/CV.pdf">CV</a>
+        <a class="home__button" href="mailto:{{ site.author.email }}">Email</a>
+      </div>
+    </div>
+    <div class="home__hero-mark" aria-hidden="true">
+      <span>AI</span>
+      <span>×</span>
+      <span>SE</span>
+    </div>
+  </section>
+
+  <div class="home__body">
+    {% include sidebar.html %}
+
+    <article class="home__article" itemscope itemtype="http://schema.org/Person">
+      {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+      <section class="page__content" itemprop="description">
+        {{ content }}
+      </section>
+    </article>
+  </div>
+</main>
