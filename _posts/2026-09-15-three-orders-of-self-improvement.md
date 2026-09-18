@@ -25,8 +25,8 @@ classes:
 # How Far Has RSI Gotten in Post-Training?
 
 <figure class="post-figure">
-  <img src="{{ base_path }}/images/blog/staircase-hero-en.svg" alt="Four columns from left to right: order 0, a robot standing on the ground with no layers; order 1, a robot on one green slab labelled search method; order 2, a person and a robot on two slabs, the upper one amber and labelled which tasks; order 3, a person on four slabs, the top two hatched and labelled verifier and capability axis." loading="lazy">
-  <figcaption>Each step is built from the layers of the objective the agent takes over. Order 0 stands on the ground: a plain code agent with no verifier. Colour is who does that layer today: green, agents; amber, human-designed pipelines that agents execute; hatched, humans only.</figcaption>
+  <img src="{{ base_path }}/images/blog/staircase-hero-en.svg" alt="Four columns from left to right: order 0, a robot standing on the ground with no layers; order 1, a robot on one green slab labelled method; order 2, a person and a robot on three slabs, the upper two amber and labelled data and verifier; order 3, a person on four slabs, the top one hatched and labelled target." loading="lazy">
+  <figcaption>Each step is built from the layers the agent takes over, bottom to top: method, data, verifier, target. Order 0 stands on the ground: a plain code agent that changes none of them. Colour is who supplies that layer today: green, agents; amber, human-designed pipelines that agents execute; hatched, humans only.</figcaption>
 </figure>
 
 <p class="contents-line" markdown="1"><strong>Contents:</strong> [Four orders, one variable](#four-orders-one-variable) · [Order 0](#order-0-instruction-in-human-accepts) · [Order 1](#order-1-verifier-in-score-up) · [Order 2](#order-2-target-in-testbed-out) · [Order 3](#order-3-nothing-in-benchmark-out) · [Open questions](#open-questions)</p>
@@ -39,22 +39,31 @@ The scope is post-training and the things around it: agent scaffolds, training r
 
 ## Four orders, one variable
 
-Every objective in post-training has three layers, listed here from the bottom up: **which tasks** are used, **what counts as success**, and **which capability** is being measured. SWE-bench Verified spells all three out: these 500 GitHub issues; the repository's own tests pass after the patch; bug fixing. Beneath the three sits a fourth thing that is not part of the objective at all: the **search method**, meaning the prompt, tools, training recipe or search strategy the agent uses to get a higher score.
+Take any system that calls itself self-improving and look at what it is working with. There are four things, and they stack from the bottom up:
 
-The orders are defined by which of these the agent supplies.
+1. **The method layer**: the prompt, scaffold, tools, memory or training recipe that turns a model into a score on some task. A plain code agent already has one.
+2. **The data layer**: the tasks. For SWE-bench Verified, the 500 GitHub issues.
+3. **The verifier layer**: whatever decides, for each task, whether it was solved. Here, the repository's own tests passing after the patch; elsewhere a wall clock, a validation loss, a hidden test set.
+4. **The target layer**: what the whole thing is measuring. Here, bug fixing.
 
-| Order | Handed to the agent | Agent supplies | Loop closed by |
+The bottom layer belongs to the agent; the top three together are the objective it is pointed at. Now the one variable. For any such system, ask **how many of the four layers the agent supplies itself, counting from the bottom.** The answer is always a contiguous block, and that gives the four orders.
+
+| Order | The agent is handed | The agent supplies | Who closes the loop |
 |---|---|---|---|
-| **0** | An instruction | A solution to this task | A human, reading the result |
-| **1** | A task set and a verifier | A better search method | The verifier |
-| **2** | A capability name | The task set, then order 1 | The verifier, which must first be found |
-| **3** | Nothing | The capability, the verifier, the tasks | Nothing exists yet |
+| **0** | An instruction | A solution to this one task; none of the layers change | A person, reading the result |
+| **1** | Data, verifier, target | The method | The verifier |
+| **2** | The target | The data and its verifier, then order 1 on them | The verifier the agent found or built |
+| **3** | Nothing | All four | Nothing exists yet |
 
-Order 0 is a plain code agent. Order 1 is where RSI begins, and the step from 0 to 1 is the one that matters most: it is the first time a verifier stands in the loop instead of a person. Each order after that takes over one more layer of the objective, which is why the staircase at the top of the post rises by one slab for orders 1 and 2 and by two slabs for order 3.
+Each order takes over more of the stack from the bottom. That is the staircase at the top of the post: order 0 stands on the ground and changes no layer, order 1 stands on the method layer, order 2 adds the data and verifier layers together, order 3 adds the target. Data and verifier come as a pair because a task without a way to grade it is not a task yet, which is why the second step is the tall one. The colour of each layer says who supplies it today.
 
-The boundary between order 0 and order 1 needs one more sentence, because a code agent that reruns failing tests until they pass also has a verifier and also iterates. The difference is what the loop produces. At order 0 the product is the solution to this task; the tests are acceptance, and once they pass the loop is over and nothing carries forward. At order 1 the product is the system itself, whatever is being edited: the agent's code, the training script, the kernel. The metric is a quantity over a whole task set, and what this iteration improved is what the next iteration starts from. A loop whose product is a task solution is order 0 however many times it runs; a loop whose product is a better version of the thing running the loop is order 1.
+Three boundaries separate the four orders, and each one is a different kind of step.
 
-Two terms recur. A **capability facet** is something nameable in one phrase and testable in isolation: bug fixing, long-context localization, multi-step tool use. A **verifier** is whatever decides success automatically: a test suite, a wall clock, a validation loss, a hidden test set.
+**Order 0 to order 1** is the birth of a loop. A plain code agent that reruns failing tests until they pass has a verifier too, so the difference is not whether a verifier exists but what the loop produces. At order 0 the product is the solution to this task; once the tests pass, the loop ends and nothing carries forward. At order 1 the product is the method itself, the agent's own code, its training script, its kernel, and what this iteration improved is what the next one starts from. This is where RSI begins, and it is the only boundary that turns a tool into a loop.
+
+**Order 1 to order 2** is a change in what the task set is. At order 1 the set is the 500 published instances and never grows. At order 2 the agent adds legitimate new members to the same set, real or synthetic issues, each with a verifier of its own, and then runs order 1 on what it built. The set was always larger than the benchmark; order 2 is the agent going out to collect more of it, and the work is almost entirely in finding where each new task's verifier comes from.
+
+**Order 2 to order 3** is the loss of the demonstration. At order 2 the target is named and the benchmark shows one way of judging it; the agent only has to enlarge along the same distribution. At order 3 there is no target and no benchmark to copy, so the agent must first decide what is worth measuring and then do order 2 for it.
 
 ## Order 0: instruction in, human accepts
 
@@ -64,7 +73,7 @@ That is not a limitation; it is what the tools are for. It matters here only as 
 
 ## Order 1: verifier in, score up
 
-**Definition.** The agent is handed a task set and a verifier. Its job is to change its own search method, any of prompt, tools, code, memory, search strategy or training recipe, so that the verifier's number goes up, and to keep the change if it does. The three layers of the objective are untouched. Concretely: hand an agent SWE-bench Verified and its test harness, let it edit its own scaffold or its training script, rerun the harness, keep the edit if the resolve rate rose, and repeat until the budget runs out. The 500 tasks never change; the thing that changes is the agent.
+**Definition.** The agent is handed a task set and a verifier. Its job is to change its own method, any of prompt, tools, code, memory or training recipe, so that the verifier's number goes up, and to keep the change if it does. The three layers of the objective are untouched. Concretely: hand an agent SWE-bench Verified and its test harness, let it edit its own scaffold or its training script, rerun the harness, keep the edit if the resolve rate rose, and repeat until the budget runs out. The 500 tasks never change; the thing that changes is the agent.
 
 **Why it is hard.** The naive version is to take the benchmark's own tasks, distill a few dozen trajectories each, and fine-tune. This does not reach a full score; it buys a modest gain and sometimes loses points, because distilled trajectories do not follow the paths the model would take on its own, and forcing them in scrambles behavior the model already had. What works is decomposing tasks and teaching step by step, or on-policy distillation, where the student walks and the teacher gives signal only where the student went. An order-1 agent takes over exactly this: finding the way up without a person decomposing sub-tasks or tuning the recipe.
 
@@ -81,7 +90,7 @@ Andrej Karpathy, a founding member of OpenAI and formerly Director of AI at Tesl
   <figcaption>RSIAgent on a FreeCAD task: practice across task groups, then rounds against the target, then test-time reuse of the frozen memory. (Image source: <a href='https://arxiv.org/abs/2609.15364'>RSIAgent 2026</a>)</figcaption>
 </figure>
 
-On OSWorld 2.0 the harness goes from 71.97 to 78.98 partial score and on Agents' Last Exam from 83.75 to 84.82, passing the numbers reported for GPT-6 Astra on partial score while staying below it on ALE's binary score, 50.75 against 52.24. *Why order 1.* Tasks and scorers are given; the memory is the search method, one per target, and the practice tasks are scaffolding that enters no benchmark.
+On OSWorld 2.0 the harness goes from 71.97 to 78.98 partial score and on Agents' Last Exam from 83.75 to 84.82, passing the numbers reported for GPT-6 Astra on partial score while staying below it on ALE's binary score, 50.75 against 52.24. *Why order 1.* Tasks and scorers are given; the memory is the method, one per target, and the practice tasks are scaffolding that enters no benchmark.
 
 ### AlphaEvolve
 
@@ -104,9 +113,9 @@ Order-1 ability has its own benchmarks. **RE-Bench** ([Wijk et al. 2024](https:/
 
 ## Order 2: target in, testbed out
 
-**Definition.** Order 1 left all three layers of the objective alone. Order 2 is what happens when the agent takes over the lowest one: which tasks are used.
+**Definition.** Order 1 left the objective alone. Order 2 is what happens when the agent takes over the data layer and, with it, the verifier layer: which tasks are used, and how each one is graded.
 
-Take SWE-bench Verified. Its definition, a codebase, a failing test, a patch that makes the test pass, frames a set far larger than the 500 instances it publishes. Every real GitHub issue with that shape belongs to the set, collected or not, and so does every synthetic one that satisfies the same rule. Order 1 only ever searches methods against the 500 that were collected. Order 2 adds new members to the set: tasks that are same-distribution with the target but not its items, that each press on a capability facet rather than on the benchmark, and that are independently gradable whether or not anyone trains on them. Then it applies order 1 to what it built. Concretely: hand an agent the phrase "bug fixing" and the SWE-bench rules, and its job is to go to GitHub, pick repositories, mint issues that have a failing test and a passing patch, and only then train on them.
+Take SWE-bench Verified. Its definition, a codebase, a failing test, a patch that makes the test pass, frames a set far larger than the 500 instances it publishes. Every real GitHub issue with that shape belongs to the set, collected or not, and so does every synthetic one that satisfies the same rule. Order 1 only ever searches methods against the 500 that were collected. Order 2 adds new members to the set: tasks that are same-distribution with the target but not its items, that each press on one nameable, separately testable skill (bug fixing, long-context localization, multi-step tool use) rather than on the benchmark as a whole, and that each come with a verifier, so they are gradable whether or not anyone trains on them. Then it applies order 1 to what it built. Concretely: hand an agent the phrase "bug fixing" and the SWE-bench rules, and its job is to go to GitHub, pick repositories, mint issues that have a failing test and a passing patch, and only then train on them.
 
 The bottleneck is the verifier. Writing a new task is easy; writing one that can be automatically judged is hard. Every order-2 pipeline running at scale today runs because a person first worked out where its verifier comes from. So the two systems below are **order 2 done by humans and agents together**: people designed the pipeline and chose the verifier, agents execute every step. No agent has done order 2 alone; the section ends with the two that have come closest.
 
@@ -242,8 +251,8 @@ Or
 # RSI 在后训练上，做到了什么程度？
 
 <figure class="post-figure">
-  <img src="{{ base_path }}/images/blog/staircase-hero-zh.svg" alt="从左到右四列：零阶，一个机器人站在地面上，脚下没有色带；一阶，机器人站在一条绿色色带上，写着搜索方法；二阶，一个人和一个机器人站在两层色带上，上面一层黄色，写着用哪些题；三阶，一个人站在四层色带上，最上面两层是斜纹，写着验证器和能力轴。" loading="lazy">
-  <figcaption>每级台阶由 agent 接管的目标层垒成。零阶站在地面上：普通 code agent，没有验证器。颜色是今天这一层由谁做：绿色 agent 已能做，黄色人设计管线、agent 执行，斜纹只有人做成过。</figcaption>
+  <img src="{{ base_path }}/images/blog/staircase-hero-zh.svg" alt="从左到右四列：零阶，一个机器人站在地面上，脚下没有色带；一阶，机器人站在一条绿色色带上，写着方法；二阶，一个人和一个机器人站在三层色带上，上面两层黄色，写着数据和验证器；三阶，一个人站在四层色带上，最上面一层是斜纹，写着目标。" loading="lazy">
+  <figcaption>每级台阶由 agent 接管的层垒成，从下到上：方法、数据、验证器、目标。零阶站在地面上：普通 code agent，哪一层都不动。颜色是今天这一层由谁补：绿色 agent 已能做，黄色人设计管线、agent 执行，斜纹只有人做成过。</figcaption>
 </figure>
 
 <p class="contents-line" markdown="1"><strong>目录：</strong> [四个阶，一个变量](#zh-frame) · [零阶](#zh-order-0) · [一阶](#zh-order-1) · [二阶](#zh-order-2) · [三阶](#zh-order-3) · [开放问题](#zh-open)</p>
@@ -256,22 +265,31 @@ Or
 
 ## 四个阶，一个变量 {#zh-frame}
 
-后训练里的任何目标都有三层，从下往上是：**用哪些题**、**什么算成功**、**测哪种能力**。SWE-bench Verified 把三层都写明了：这 500 道 GitHub issue；打了补丁之后仓库自己的测试通过；修 bug。三层之下还有第四样东西，它根本不属于目标：**搜索方法**，也就是 agent 用来把分数做上去的 prompt、工具、训练配方或搜索策略。
+拿任何一个自称"自我改进"的系统，看它手里有什么。一共四样东西，从下往上叠：
 
-阶，就按 agent 自己补上了哪几样来定义。
+1. **方法层**：把一个模型变成某道题上的分数的那套东西，prompt、脚手架、工具、记忆或训练配方。普通 code agent 本来就有一套。
+2. **数据层**：题。对 SWE-bench Verified 来说，就是那 500 道 GitHub issue。
+3. **验证器层**：对每道题判定做没做对的东西。这里是打了补丁之后仓库自己的测试通过；换个地方可以是墙钟、验证集 loss、隐藏测试集。
+4. **目标层**：整件事在测什么。这里是修 bug。
+
+最底层是 agent 自己的，上面三层合起来是它被指向的目标。然后是那一个变量。对任何这样的系统，问：**这四层里，从底下数起，有几层是 agent 自己补上的。** 答案永远是连着的一段，这就给出了四个阶。
 
 | 阶 | 交给 agent 的 | agent 自己补的 | 谁闭环 |
 |---|---|---|---|
-| **零阶** | 一条指令 | 这道题的解 | 人，看结果 |
-| **一阶** | 一个题集和一个验证器 | 更好的搜索方法 | 验证器 |
-| **二阶** | 一个能力的名字 | 题集，然后做一阶 | 验证器，但得先找到它 |
-| **三阶** | 什么都没有 | 能力、验证器、题集 | 还不存在 |
+| **零阶** | 一条指令 | 这一道题的解，四层都不动 | 人，看结果 |
+| **一阶** | 数据、验证器、目标 | 方法 | 验证器 |
+| **二阶** | 目标 | 数据和它的验证器，然后在上面做一阶 | agent 自己找到或造出的验证器 |
+| **三阶** | 什么都没有 | 四层全部 | 还不存在 |
 
-零阶是普通 code agent。RSI 从一阶开始，零阶到一阶这一步是最要紧的一步：这是验证器第一次替人站进循环里。之后每上一阶多接管目标的一层，所以文首的台阶图一阶、二阶各高一层，三阶高两层。
+每上一阶，agent 从底下多接管一截。这就是文首的台阶图：零阶站在地面上，哪一层都不动；一阶站在方法层上；二阶一次加上数据层和验证器层；三阶加上目标层。数据和验证器成对出现，因为一道没法判分的题还不算题，所以第二级台阶是最高的一级。每层的颜色表示今天这一层由谁补。
 
-零阶和一阶的分界还要多说一句，因为一个 code agent 对着失败的测试反复改直到通过，也有验证器，也在迭代。区别在循环的产物。零阶的产物是这道题的解，测试只是验收，过了就结束，什么都不带走。一阶的产物是被改的那个系统本身，不管改的是 agent 的代码、训练脚本还是 kernel。指标是一个跨整个题集的量，这一轮改好的东西是下一轮的起点。产物是题解的循环，跑多少遍都是零阶；产物是"跑循环的那个东西的更好版本"的循环，才是一阶。
+四个阶之间有三条分界线，每一条都是不同性质的一步。
 
-后面会反复用到两个词。**能力切面**指一句话能说清、能单独测的能力：修 bug、长上下文定位、多步工具调用。**验证器**指任何能自动判定成功的东西：测试集、墙钟、验证集 loss、隐藏测试集。
+**零阶到一阶**是循环的诞生。一个普通 code agent 对着失败的测试反复改直到通过，也有验证器，所以区别不在有没有验证器，而在循环的产物是什么。零阶的产物是这道题的解，测试一通过循环就结束，什么都不带走。一阶的产物是跑循环的那个系统本身，agent 自己的代码、训练脚本、kernel，这一轮改好的东西是下一轮的起点。RSI 从这里开始，这也是唯一一条把工具变成循环的分界线。
+
+**一阶到二阶**是题集的性质变了。一阶的题集就是公开的那 500 道，永远不长。二阶是 agent 往同一个集合里添合法的新成员，真实或合成的 issue，每道带着自己的验证器，然后在造出来的东西上做一阶。这个集合本来就比 benchmark 大，二阶就是 agent 自己出去多收集一些，而活几乎全在“每道新题的验证器从哪来”上。
+
+**二阶到三阶**是失去了示范。二阶时目标已经命名、benchmark 也示范了一种判法，agent 只需要沿同一分布放大。三阶没有目标也没有 benchmark 可抄，agent 得先决定什么值得测，再为它做一遍二阶。
 
 ## 零阶：给指令，人验收 {#zh-order-0}
 
@@ -281,7 +299,7 @@ Or
 
 ## 一阶：给验证器，把分做上去 {#zh-order-1}
 
-**定义。** 交给 agent 一个题集和一个验证器。它要做的是改自己的搜索方法，prompt、工具、代码、记忆、搜索策略、训练配方都行，让验证器的数字涨上去，涨了就留下。目标的三层都不动。具体说：把 SWE-bench Verified 和它的测试 harness 交给一个 agent，让它改自己的脚手架或训练脚本，重跑 harness，解决率涨了就留下这处改动，如此反复直到预算用完。那 500 道题从头到尾不变，变的是 agent。
+**定义。** 交给 agent 一个题集和一个验证器。它要做的是改自己的方法，prompt、工具、代码、记忆、训练配方都行，让验证器的数字涨上去，涨了就留下。目标的三层都不动。具体说：把 SWE-bench Verified 和它的测试 harness 交给一个 agent，让它改自己的脚手架或训练脚本，重跑 harness，解决率涨了就留下这处改动，如此反复直到预算用完。那 500 道题从头到尾不变，变的是 agent。
 
 **为什么难。** 最朴素的做法是拿榜单自己的题，每题蒸馏几十条轨迹，拿去微调。这刷不到满分，只能拿到轻微提分，有时还掉分：蒸馏来的轨迹和模型自己会走的路不一样，硬灌进去把原有的行为搅乱了。真正有效的是把任务拆开、一步一步教，或者 on-policy distillation，让学生自己走、老师只在它走到的地方给信号。一阶 agent 接管的就是这件事：不靠人拆子任务、不靠人调配方，自己找到往上走的路。
 
@@ -298,7 +316,7 @@ Andrej Karpathy 是 OpenAI 的创始成员、前特斯拉 AI 总监，一直在�
   <figcaption>RSIAgent 做一道 FreeCAD 题：先跨任务组练习，再对着目标分轮练，最后测试时复用冻结的记忆。（图源：<a href='https://arxiv.org/abs/2609.15364'>RSIAgent 2026</a>）</figcaption>
 </figure>
 
-在 OSWorld 2.0 上 harness 的 partial 分从 71.97 到 78.98，在 Agents' Last Exam 上从 83.75 到 84.82，partial 分超过了 GPT-6 Astra 的报告值，ALE 的 binary 分仍低于它，50.75 对 52.24。*为什么是一阶。* 题和打分器是给定的，记忆就是搜索方法，一题一份，练习题是脚手架，不进任何 benchmark。
+在 OSWorld 2.0 上 harness 的 partial 分从 71.97 到 78.98，在 Agents' Last Exam 上从 83.75 到 84.82，partial 分超过了 GPT-6 Astra 的报告值，ALE 的 binary 分仍低于它，50.75 对 52.24。*为什么是一阶。* 题和打分器是给定的，记忆就是方法，一题一份，练习题是脚手架，不进任何 benchmark。
 
 ### AlphaEvolve
 
@@ -321,9 +339,9 @@ Andrej Karpathy 是 OpenAI 的创始成员、前特斯拉 AI 总监，一直在�
 
 ## 二阶：给目标，造测试床 {#zh-order-2}
 
-**定义。** 一阶把目标的三层都留着没动。二阶是 agent 开始接管最底下那层：用哪些题。
+**定义。** 一阶没有碰目标。二阶是 agent 接管数据层，连带验证器层：用哪些题，以及每道题怎么判。
 
-拿 SWE-bench Verified 来说。它的定义，一个仓库、一个失败的测试、一个让测试通过的补丁，框住的是一个远大于它公开的 500 道题的集合。所有满足这个形状的真实 GitHub issue 都属于这个集合，不管有没有被收录；满足同一条规则的合成题也属于它。一阶始终只在那 500 道已收录的题上搜索方法。二阶往集合里添新成员：和目标同分布但不是目标里的题，每道压在一个能力切面上而不是压在 benchmark 上，不管有没有人拿去训练都能独立判分。造完之后，对着造出来的东西做一阶。具体说：只给 agent “修 bug” 三个字和 SWE-bench 的规则，它要做的是去 GitHub 挑仓库，造出带一个失败测试和一个能通过的补丁的 issue，然后才拿它们训练。
+拿 SWE-bench Verified 来说。它的定义，一个仓库、一个失败的测试、一个让测试通过的补丁，框住的是一个远大于它公开的 500 道题的集合。所有满足这个形状的真实 GitHub issue 都属于这个集合，不管有没有被收录；满足同一条规则的合成题也属于它。一阶始终只在那 500 道已收录的题上找方法。二阶往集合里添新成员：和目标同分布但不是目标里的题，每道压在一项能单独命名、单独测的能力上（修 bug、长上下文定位、多步工具调用），而不是压在整个 benchmark 上，每道自带验证器，不管有没有人拿去训练都能判分。造完之后，对着造出来的东西做一阶。具体说：只给 agent “修 bug” 三个字和 SWE-bench 的规则，它要做的是去 GitHub 挑仓库，造出带一个失败测试和一个能通过的补丁的 issue，然后才拿它们训练。
 
 瓶颈是验证器。造一道新题容易，造一道能自动判对错的新题难。今天所有大规模跑着的二阶管线，都是因为先有人想清楚了验证器从哪来。所以下面两个系统是**人机协同做成的二阶**：人设计管线、选定验证器，agent 执行每一步。还没有 agent 独立做成过二阶，本节最后会讲离它最近的两个。
 
