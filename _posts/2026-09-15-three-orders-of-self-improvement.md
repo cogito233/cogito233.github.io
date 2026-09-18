@@ -57,6 +57,8 @@ Now the one variable. For any such system, ask **how many of the four layers the
 
 Each order takes over more of the stack from the bottom. That is the staircase at the top of the post: order 0 stands on the ground and changes no layer, order 1 stands on the method layer, order 2 adds the data and verifier layers together, order 3 adds the target. Data and verifier come as a pair because a task without a way to grade it is not a task yet, which is why the second step is the tall one. The colour of each layer says who supplies it today.
 
+The ground floor is worth spelling out, because everything else is measured from it. At **order 0** the agent supplies none of the four layers. Its method is whatever the code agent shipped with; there is no data layer, because there is no set of tasks, only the one instruction the user typed; there is no verifier, because the user reads the diff and decides; and there is no target, because nothing is being measured. Every result is approved by a person, one at a time, and nothing carries over to the next instruction.
+
 Three boundaries separate the four orders, and each one is a different kind of step.
 
 **Order 0 to order 1** is the birth of a loop. A plain code agent that reruns failing tests until they pass has a verifier too, so the difference is not whether a verifier exists but what the loop produces. At order 0 the product is the solution to this task; once the tests pass, the loop ends and nothing carries forward. At order 1 the product is the method itself, the agent's own code, its training script, its kernel, and what this iteration improved is what the next one starts from. This is where RSI begins, and it is the only boundary that turns a tool into a loop.
@@ -282,6 +284,8 @@ Or
 | **三阶** | 什么都没有 | 四层全部 | 还不存在 |
 
 每上一阶，agent 从底下多接管一截。这就是文首的台阶图：零阶站在地面上，哪一层都不动；一阶站在方法层上；二阶一次加上数据层和验证器层；三阶加上目标层。数据和验证器成对出现，因为一个没法判分的任务还不算任务，所以第二级台阶是最高的一级。每层的颜色表示今天这一层由谁补。
+
+地面这一层值得单独说清楚，因为其他每一阶都是从它量起的。**零阶**的 agent 四层一层都不补。方法就是 code agent 出厂自带的那套；没有数据层，因为没有任务集，只有用户敲进来的这一条指令；没有验证器，因为是用户看 diff 决定要不要；也没有目标，因为没有任何东西在被测量。每个结果都由人逐个批准，做完这条指令，什么都不会带到下一条。
 
 四个阶之间有三条分界线，每一条都是不同性质的一步。
 
