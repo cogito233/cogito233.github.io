@@ -9,13 +9,29 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Zhiheng. Welcome to my personal website! This fall I'm joining the University of Illinois Urbana-Champaign (UIUC) as a Computer Science PhD student, advised by Professor [Lingming Zhang](http://lingming.cs.illinois.edu/). My research focuses on **AI for Software Engineering**, particularly agentic post-training, evaluation, and task synthesis.
+Hi, I'm Zhiheng. Welcome to my personal website! I'm a first-year Computer Science PhD student at the University of Illinois Urbana-Champaign (UIUC), advised by Professor [Lingming Zhang](http://lingming.cs.illinois.edu/). My research focuses on **AI for Software Engineering**, particularly agentic post-training, evaluation, and task synthesis.
+
+<p class="visitor-geo" id="visitor-geo" aria-live="polite"></p>
+<script>
+(function(){
+  var el=document.getElementById('visitor-geo'); if(!el) return;
+  var ctl=new AbortController(); setTimeout(function(){ctl.abort()},4000);
+  fetch('https://ipapi.co/json/',{signal:ctl.signal}).then(function(r){return r.ok?r.json():null}).then(function(d){
+    if(!d||!d.country_name) return;
+    var place=[d.city,d.region,d.country_name].filter(function(x){return x&&x.length}).filter(function(x,i,a){return a.indexOf(x)===i}).join(', ');
+    var h=new Date().getHours(); var g=h<5?'Good night':h<12?'Good morning':h<18?'Good afternoon':'Good evening';
+    el.textContent=g+', visitor from '+place+'.';
+  }).catch(function(){});
+})();
+</script>
+
 
 I completed my M.Math. in Computer Science at the University of Waterloo (2026), supervised by Professor [Wenhu Chen](https://wenhuchen.github.io/) at the [TIGER Lab](https://tiger-ai-lab.github.io/), with a thesis on post-training LLMs as software engineering agents. Before that, I did my undergrad at the University of Hong Kong, where I entered the **ICPC World Finals** and won two regional gold medals, and worked with research groups at Berkeley, ETH Zürich, and the University of Michigan.
 
 ## Highlights
 
 <ul class="highlights">
+  <li><span class="hl__date">Sep 2026</span><span>New blog post: <a href="/blog/three-orders-of-self-improvement/"><strong>How Far Has RSI Gotten in Post-Training?</strong></a> — from plain code agent to RSI: four orders, which one agents have reached (English / 中文).</span></li>
   <li><span class="hl__date">Aug 2026</span><span>Joining <strong>UIUC</strong> as a CS PhD student, advised by Prof. <a href="http://lingming.cs.illinois.edu/">Lingming Zhang</a>.</span></li>
   <li><span class="hl__date">Jul 2026</span><span>Released <a href="https://arxiv.org/abs/2607.20911"><strong>Tencent WorkBuddy Bench</strong></a> — 260 contamination-resistant real-world tasks across Code, Web, Office, and Security.</span></li>
   <li><span class="hl__date">Jun 2026</span><span><a href="https://arxiv.org/abs/2509.01055"><strong>VerlTool</strong></a> accepted to <a href="https://jmlr.org/tmlr/">TMLR</a>, after winning the <span class="hl__award">Best Paper Award</span> at the <a href="https://spoticlr.github.io/">SPOT Workshop @ ICLR 2026</a>.</span></li>
