@@ -150,6 +150,10 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - markdown_generator
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - README.md
 keep_files:
   - .git
   - .svn
